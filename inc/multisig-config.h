@@ -1,4 +1,24 @@
 #pragma once
 
+#define _WIN32_WINNT 0x0601
+
 #define _CRT_SECURE_NO_WARNINGS
+
+#define QT_STATIC
+
+#define LIBODB_STATIC_LIB
+#define LIBODB_SQLITE_STATIC_LIB
+
+#define DATABASE_SQLITE
+
+#define BOOST_ALL_NO_LIB
+#define BOOST_FILESYSTEM_NO_LIB
+
+#define BOOST_ASIO_ERROR_CATEGORY_NOEXCEPT noexcept(true)
+
+#define NOMINMAX
+
+#pragma warning(disable: 4068 4101 4244 4267 4290 4308 4800 4996)
+
+
 

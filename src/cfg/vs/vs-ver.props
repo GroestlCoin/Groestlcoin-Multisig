@@ -1,4 +1,7 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup Label="Globals">
+		<IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+	</PropertyGroup>
 	<PropertyGroup>
     	<PlatformToolset Condition="'$(PlatformToolset)' == '' AND '$(VisualStudioVersion)' == '12.0'">v120</PlatformToolset>
 	    <PlatformToolset Condition="'$(PlatformToolset)' == '' AND Exists('$(VCTargetsPath)\..\V140') ">v140</PlatformToolset>
