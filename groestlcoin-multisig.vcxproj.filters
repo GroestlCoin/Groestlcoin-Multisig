@@ -49,6 +49,9 @@
     <Filter Include="odb-sqlite\details">
       <UniqueIdentifier>{a72a638a-fe23-4cc3-b0f0-a8114fc33e98}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CoinCore\hashfunc">
+      <UniqueIdentifier>{c6696228-4a97-403d-87cc-110382f34809}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\mainwindow.cpp">
@@ -215,6 +218,123 @@
     </ClCompile>
     <ClCompile Include="src\moc\moc_keychainmodel.cpp">
       <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\txmodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\setpassphrasedialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_signaturedialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\accountview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_mainwindow.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_currencyunitdialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\result.cxx">
+      <Filter>odb</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinCore\src\hashfunc\blake.c">
+      <Filter>CoinCore\hashfunc</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinCore\src\hashfunc\bmw.c">
+      <Filter>CoinCore\hashfunc</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinCore\src\hashfunc\groestl.c">
+      <Filter>CoinCore\hashfunc</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinCore\src\hashfunc\jh.c">
+      <Filter>CoinCore\hashfunc</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinCore\src\hashfunc\keccak.c">
+      <Filter>CoinCore\hashfunc</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinCore\src\hashfunc\skein.c">
+      <Filter>CoinCore\hashfunc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_txmodel.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\signaturedialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_requestpaymentdialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\keychainbackupdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\viewbip39dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scriptdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\createtxdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_accountview.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\sqlite\connection.cxx">
+      <Filter>odb-sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\details\condition.cxx">
+      <Filter>odb\details</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\sqlite\statements-base.cxx">
+      <Filter>odb-sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\prepared-query.cxx">
+      <Filter>odb</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\details\win32\condition.cxx">
+      <Filter>odb\details\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_createtxdialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\unspenttxoutview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scriptmodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_setpassphrasedialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_viewbip39dialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_txactions.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_quicknewaccountdialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\docdir.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\networksettingsdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_keychainview.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinCore\src\scrypt\scrypt.cpp">
+      <Filter>CoinCore\hashfunc</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\sqlite\error.cxx">
+      <Filter>odb-sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="src\unspenttxoutmodel.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -160,9 +160,70 @@
     <ClCompile Include="deps\CoinCore\src\aes.cpp" />
     <ClCompile Include="deps\CoinCore\src\BloomFilter.cpp" />
     <ClCompile Include="deps\CoinCore\src\CoinNodeData.cpp" />
+    <ClCompile Include="deps\CoinCore\src\hashfunc\blake.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">NotUsing</PrecompiledHeader>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="deps\CoinCore\src\hashfunc\bmw.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">NotUsing</PrecompiledHeader>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="deps\CoinCore\src\hashfunc\groestl.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">NotUsing</PrecompiledHeader>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="deps\CoinCore\src\hashfunc\jh.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">NotUsing</PrecompiledHeader>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="deps\CoinCore\src\hashfunc\keccak.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">NotUsing</PrecompiledHeader>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="deps\CoinCore\src\hashfunc\skein.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">NotUsing</PrecompiledHeader>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFileName>
+    </ClCompile>
     <ClCompile Include="deps\CoinCore\src\hdkeys.cpp" />
     <ClCompile Include="deps\CoinCore\src\IPv6.cpp" />
     <ClCompile Include="deps\CoinCore\src\MerkleTree.cpp" />
+    <ClCompile Include="deps\CoinCore\src\scrypt\scrypt.cpp" />
     <ClCompile Include="deps\CoinCore\src\secp256k1.cpp" />
     <ClCompile Include="deps\CoinDB\src\Schema.cpp" />
     <ClCompile Include="deps\CoinDB\src\SynchedVault.cpp" />
@@ -181,11 +242,18 @@
     <ClCompile Include="deps\logger\src\logger.cpp" />
     <ClCompile Include="foreign\odb\connection.cxx" />
     <ClCompile Include="foreign\odb\details\buffer.cxx" />
+    <ClCompile Include="foreign\odb\details\condition.cxx" />
+    <ClCompile Include="foreign\odb\details\win32\condition.cxx" />
     <ClCompile Include="foreign\odb\details\win32\exceptions.cxx" />
+    <ClCompile Include="foreign\odb\prepared-query.cxx" />
+    <ClCompile Include="foreign\odb\result.cxx" />
     <ClCompile Include="foreign\odb\sqlite\connection-factory.cxx" />
+    <ClCompile Include="foreign\odb\sqlite\connection.cxx" />
     <ClCompile Include="foreign\odb\sqlite\details\options.cxx" />
+    <ClCompile Include="foreign\odb\sqlite\error.cxx" />
     <ClCompile Include="foreign\odb\sqlite\exceptions.cxx" />
     <ClCompile Include="foreign\odb\sqlite\statement-cache.cxx" />
+    <ClCompile Include="foreign\odb\sqlite\statements-base.cxx" />
     <ClCompile Include="foreign\odb\sqlite\traits.cxx" />
     <ClCompile Include="foreign\odb\sqlite\transaction-impl.cxx" />
     <ClCompile Include="foreign\odb\sqlite\transaction.cxx" />
@@ -216,13 +284,30 @@
     <ClCompile Include="foreign\odb\sqlite\statement.cxx" />
     <ClCompile Include="foreign\odb\transaction.cxx" />
     <ClCompile Include="src\accountmodel.cpp" />
+    <ClCompile Include="src\accountview.cpp" />
     <ClCompile Include="src\coinparams.cpp" />
+    <ClCompile Include="src\createtxdialog.cpp" />
     <ClCompile Include="src\currencyunitdialog.cpp" />
+    <ClCompile Include="src\docdir.cpp" />
+    <ClCompile Include="src\keychainbackupdialog.cpp" />
     <ClCompile Include="src\keychainmodel.cpp" />
     <ClCompile Include="src\keychainview.cpp" />
     <ClCompile Include="src\mainwindow.cpp" />
     <ClCompile Include="src\moc\moc_accountmodel.cpp" />
+    <ClCompile Include="src\moc\moc_accountview.cpp" />
+    <ClCompile Include="src\moc\moc_createtxdialog.cpp" />
+    <ClCompile Include="src\moc\moc_currencyunitdialog.cpp" />
     <ClCompile Include="src\moc\moc_keychainmodel.cpp" />
+    <ClCompile Include="src\moc\moc_keychainview.cpp" />
+    <ClCompile Include="src\moc\moc_mainwindow.cpp" />
+    <ClCompile Include="src\moc\moc_quicknewaccountdialog.cpp" />
+    <ClCompile Include="src\moc\moc_requestpaymentdialog.cpp" />
+    <ClCompile Include="src\moc\moc_setpassphrasedialog.cpp" />
+    <ClCompile Include="src\moc\moc_signaturedialog.cpp" />
+    <ClCompile Include="src\moc\moc_txactions.cpp" />
+    <ClCompile Include="src\moc\moc_txmodel.cpp" />
+    <ClCompile Include="src\moc\moc_viewbip39dialog.cpp" />
+    <ClCompile Include="src\networksettingsdialog.cpp" />
     <ClCompile Include="src\networksync.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">true</ExcludedFromBuild>
@@ -233,8 +318,16 @@
     <ClCompile Include="src\quicknewaccountdialog.cpp" />
     <ClCompile Include="src\rawtxdialog.cpp" />
     <ClCompile Include="src\requestpaymentdialog.cpp" />
+    <ClCompile Include="src\scriptdialog.cpp" />
+    <ClCompile Include="src\scriptmodel.cpp" />
+    <ClCompile Include="src\setpassphrasedialog.cpp" />
+    <ClCompile Include="src\signaturedialog.cpp" />
     <ClCompile Include="src\stylesheets.cpp" />
     <ClCompile Include="src\txactions.cpp" />
+    <ClCompile Include="src\txmodel.cpp" />
+    <ClCompile Include="src\unspenttxoutmodel.cpp" />
+    <ClCompile Include="src\unspenttxoutview.cpp" />
+    <ClCompile Include="src\viewbip39dialog.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\multisig-config.h" />

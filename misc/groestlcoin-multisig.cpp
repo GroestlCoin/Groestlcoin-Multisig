@@ -15,9 +15,36 @@
 #pragma comment(lib, "sqlite3")
 
 
+#pragma comment(lib, "qtmaind.lib")
 #pragma comment(lib, "qtharfbuzzngd.lib")
 #pragma comment(lib, "Qt5Cored.lib")
 #pragma comment(lib, "Qt5Widgetsd.lib")
 #pragma comment(lib, "Qt5PlatformSupportd.lib")
 #pragma comment(lib, "Qt5Guid.lib")
 
+#include <windows.h>
+
+#undef WinMain
+
+extern "C" {
+
+int WINAPI WinMain(
+	_In_ HINSTANCE hInstance,
+	_In_ HINSTANCE hPrevInstance,
+	_In_ LPSTR     lpCmdLine,
+	_In_ int       nCmdShow
+	);
+
+int WINAPI wWinMain(
+	_In_ HINSTANCE hInstance,
+	_In_ HINSTANCE hPrevInstance,
+	_In_ LPWSTR     lpCmdLine,
+	_In_ int       nCmdShow
+	) {
+
+	return WinMain(hInstance, hPrevInstance, 0, nCmdShow);
+
+
+}
+
+}
