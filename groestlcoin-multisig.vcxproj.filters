@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="CoinCore">
+      <UniqueIdentifier>{8a488599-4457-4acc-8f14-92011c3866df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="misc">
+      <UniqueIdentifier>{509a2194-efab-49df-bdf3-230a28e4495d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CoinDB">
+      <UniqueIdentifier>{663a52cb-1c99-4e1c-b196-3fed533b3f66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CoinQ">
+      <UniqueIdentifier>{a9cc6538-0253-45b5-ad6b-de5ed4a524a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\odb">
+      <UniqueIdentifier>{bd0c8904-a9e7-4c68-aeb1-f198e5cbedd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="odb">
+      <UniqueIdentifier>{53237cfe-4a7d-4d6e-b759-6ed9a8126c10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\moc">
+      <UniqueIdentifier>{1d7d92bc-384f-45f0-b654-ba4c5c559743}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="logger">
+      <UniqueIdentifier>{19371532-891d-43a6-a4a1-2f2d514bb0de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="odb-sqlite">
+      <UniqueIdentifier>{b88b56db-44c1-4078-ba77-53cc5b7068b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="odb\details">
+      <UniqueIdentifier>{b7324549-9d42-46e1-8460-e82fb6e37491}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="odb\details\win32">
+      <UniqueIdentifier>{3cf64c88-b057-4281-a2a4-28cb5fc1bd45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="odb-sqlite\details">
+      <UniqueIdentifier>{a72a638a-fe23-4cc3-b0f0-a8114fc33e98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinCore\src\CoinNodeData.cpp">
+      <Filter>CoinCore</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\groestlcoin-multisig.cpp">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinCore\src\IPv6.cpp">
+      <Filter>CoinCore</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinCore\src\MerkleTree.cpp">
+      <Filter>CoinCore</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinDB\src\Vault.cpp">
+      <Filter>CoinDB</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinDB\src\SynchedVault.cpp">
+      <Filter>CoinDB</Filter>
+    </ClCompile>
+    <ClCompile Include="src\accountmodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\networksync.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\passphrasedialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\keychainmodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\stdafx.cpp">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinQ\src\CoinQ_spv_client.cpp">
+      <Filter>CoinQ</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinDB\src\Schema.cpp">
+      <Filter>CoinDB</Filter>
+    </ClCompile>
+    <ClCompile Include="src\quicknewaccountdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinQ\src\CoinQ_script.cpp">
+      <Filter>CoinQ</Filter>
+    </ClCompile>
+    <ClCompile Include="src\stylesheets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="odb\Schema-odb-sqlite.cxx">
+      <Filter>Source Files\odb</Filter>
+    </ClCompile>
+    <ClCompile Include="src\currencyunitdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinCore\src\hdkeys.cpp">
+      <Filter>CoinCore</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinCore\src\aes.cpp">
+      <Filter>CoinCore</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinCore\src\BloomFilter.cpp">
+      <Filter>CoinCore</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinCore\src\secp256k1.cpp">
+      <Filter>CoinCore</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinQ\src\CoinQ_netsync.cpp">
+      <Filter>CoinQ</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_accountmodel.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\logger\src\logger.cpp">
+      <Filter>logger</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinQ\src\CoinQ_blocks.cpp">
+      <Filter>CoinQ</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\exceptions.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\coinparams.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\requestpaymentdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rawtxdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\txactions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\keychainview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\sqlite\statement.cxx">
+      <Filter>odb-sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\session.cxx">
+      <Filter>odb</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\sqlite\exceptions.cxx">
+      <Filter>odb-sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\sqlite\query.cxx">
+      <Filter>odb-sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\sqlite\database.cxx">
+      <Filter>odb-sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\database.cxx">
+      <Filter>odb</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\transaction.cxx">
+      <Filter>odb</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\details\shared-ptr\base.cxx">
+      <Filter>odb</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\schema-catalog.cxx">
+      <Filter>odb</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\sqlite\traits.cxx">
+      <Filter>odb-sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinQ\src\CoinQ_peer_io.cpp">
+      <Filter>CoinQ</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\sqlite\transaction-impl.cxx">
+      <Filter>odb-sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\details\buffer.cxx">
+      <Filter>odb</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\connection.cxx">
+      <Filter>odb</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\sqlite\statement-cache.cxx">
+      <Filter>odb-sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\details\win32\exceptions.cxx">
+      <Filter>odb\details\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\sqlite\connection-factory.cxx">
+      <Filter>odb-sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\sqlite\transaction.cxx">
+      <Filter>odb-sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\sqlite\details\options.cxx">
+      <Filter>odb-sqlite\details</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\statement-processing.cxx">
+      <Filter>odb</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinQ\src\CoinQ_coinparams.cpp">
+      <Filter>CoinQ</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_keychainmodel.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="inc\multisig-config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

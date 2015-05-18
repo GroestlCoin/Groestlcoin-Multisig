@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="D_St|Win32">
+      <Configuration>D_St</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="D_St|x64">
+      <Configuration>D_St</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="R_St|Win32">
+      <Configuration>R_St</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="R_St|x64">
+      <Configuration>R_St</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1D0676DF-F6FE-488E-B0A8-3B358A65F438}</ProjectGuid>
+    <RootNamespace>GroestlcoinMultisig</RootNamespace>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="src\cfg\vs\vs-ver.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='D_St|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='R_St|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="src\cfg\vs\vs-inc.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='D_St|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='R_St|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>inc;inc/QtCore;inc/QtWidgets;inc/QtGui;inc/CoinCore;inc/CoinQ;inc/CoinDB;deps\qrencode-3.4.3</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <ObjectFileName>$(IntDir)\%(RelativeDir)\</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>inc;inc/QtCore;inc/QtWidgets;inc/QtGui;inc/CoinCore;inc/CoinQ;inc/CoinDB;deps\qrencode-3.4.3</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <ObjectFileName>$(IntDir)\%(RelativeDir)\</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MinSpace</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>inc;inc/QtCore;inc/QtWidgets;inc/QtGui;inc/CoinCore;inc/CoinQ;inc/CoinDB;deps\qrencode-3.4.3</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <ObjectFileName>$(IntDir)\%(RelativeDir)\</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MinSpace</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>inc;inc/QtCore;inc/QtWidgets;inc/QtGui;inc/CoinCore;inc/CoinQ;inc/CoinDB;deps\qrencode-3.4.3</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <ObjectFileName>$(IntDir)\%(RelativeDir)\</ObjectFileName>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="deps\CoinCore\src\aes.cpp" />
+    <ClCompile Include="deps\CoinCore\src\BloomFilter.cpp" />
+    <ClCompile Include="deps\CoinCore\src\CoinNodeData.cpp" />
+    <ClCompile Include="deps\CoinCore\src\hdkeys.cpp" />
+    <ClCompile Include="deps\CoinCore\src\IPv6.cpp" />
+    <ClCompile Include="deps\CoinCore\src\MerkleTree.cpp" />
+    <ClCompile Include="deps\CoinCore\src\secp256k1.cpp" />
+    <ClCompile Include="deps\CoinDB\src\Schema.cpp" />
+    <ClCompile Include="deps\CoinDB\src\SynchedVault.cpp" />
+    <ClCompile Include="deps\CoinDB\src\Vault.cpp" />
+    <ClCompile Include="deps\CoinQ\src\CoinQ_blocks.cpp" />
+    <ClCompile Include="deps\CoinQ\src\CoinQ_coinparams.cpp" />
+    <ClCompile Include="deps\CoinQ\src\CoinQ_netsync.cpp" />
+    <ClCompile Include="deps\CoinQ\src\CoinQ_peer_io.cpp" />
+    <ClCompile Include="deps\CoinQ\src\CoinQ_script.cpp" />
+    <ClCompile Include="deps\CoinQ\src\CoinQ_spv_client.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="deps\logger\src\logger.cpp" />
+    <ClCompile Include="foreign\odb\connection.cxx" />
+    <ClCompile Include="foreign\odb\details\buffer.cxx" />
+    <ClCompile Include="foreign\odb\details\win32\exceptions.cxx" />
+    <ClCompile Include="foreign\odb\sqlite\connection-factory.cxx" />
+    <ClCompile Include="foreign\odb\sqlite\details\options.cxx" />
+    <ClCompile Include="foreign\odb\sqlite\exceptions.cxx" />
+    <ClCompile Include="foreign\odb\sqlite\statement-cache.cxx" />
+    <ClCompile Include="foreign\odb\sqlite\traits.cxx" />
+    <ClCompile Include="foreign\odb\sqlite\transaction-impl.cxx" />
+    <ClCompile Include="foreign\odb\sqlite\transaction.cxx" />
+    <ClCompile Include="foreign\odb\statement-processing.cxx" />
+    <ClCompile Include="misc\groestlcoin-multisig.cpp" />
+    <ClCompile Include="misc\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">Create</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">
+      </ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">
+      </ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="odb\Schema-odb-sqlite.cxx" />
+    <ClCompile Include="foreign\odb\details\shared-ptr\base.cxx" />
+    <ClCompile Include="foreign\odb\database.cxx" />
+    <ClCompile Include="foreign\odb\exceptions.cxx" />
+    <ClCompile Include="foreign\odb\schema-catalog.cxx" />
+    <ClCompile Include="foreign\odb\session.cxx" />
+    <ClCompile Include="foreign\odb\sqlite\database.cxx" />
+    <ClCompile Include="foreign\odb\sqlite\query.cxx" />
+    <ClCompile Include="foreign\odb\sqlite\statement.cxx" />
+    <ClCompile Include="foreign\odb\transaction.cxx" />
+    <ClCompile Include="src\accountmodel.cpp" />
+    <ClCompile Include="src\coinparams.cpp" />
+    <ClCompile Include="src\currencyunitdialog.cpp" />
+    <ClCompile Include="src\keychainmodel.cpp" />
+    <ClCompile Include="src\keychainview.cpp" />
+    <ClCompile Include="src\mainwindow.cpp" />
+    <ClCompile Include="src\moc\moc_accountmodel.cpp" />
+    <ClCompile Include="src\moc\moc_keychainmodel.cpp" />
+    <ClCompile Include="src\networksync.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\passphrasedialog.cpp" />
+    <ClCompile Include="src\quicknewaccountdialog.cpp" />
+    <ClCompile Include="src\rawtxdialog.cpp" />
+    <ClCompile Include="src\requestpaymentdialog.cpp" />
+    <ClCompile Include="src\stylesheets.cpp" />
+    <ClCompile Include="src\txactions.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="inc\multisig-config.h" />
+    <ClInclude Include="inc\stdafx.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
