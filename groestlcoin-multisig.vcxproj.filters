@@ -52,6 +52,15 @@
     <Filter Include="CoinCore\hashfunc">
       <UniqueIdentifier>{c6696228-4a97-403d-87cc-110382f34809}</UniqueIdentifier>
     </Filter>
+    <Filter Include="libext">
+      <UniqueIdentifier>{59e12424-3510-4e7e-98e4-3c5d6aff42cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libext\x86x64">
+      <UniqueIdentifier>{87eacd86-859d-4dd3-b425-c6f81f3017f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="qrencode">
+      <UniqueIdentifier>{e6346457-745f-45d3-b7e6-9184698a2f1a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\mainwindow.cpp">
@@ -336,6 +345,108 @@
     <ClCompile Include="src\unspenttxoutmodel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="foreign\odb\statement.cxx">
+      <Filter>odb</Filter>
+    </ClCompile>
+    <ClCompile Include="src\numberformats.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_keychainbackupdialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_txview.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\aboutdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\newkeychaindialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\importbip32dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_rawtxdialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_scriptview.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scriptview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_unspenttxoutmodel.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entropysource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\signatureview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\qrencode-3.4.3\qrencode.c">
+      <Filter>qrencode</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\qrencode-3.4.3\qrinput.c">
+      <Filter>qrencode</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\qrencode-3.4.3\mmask.c">
+      <Filter>qrencode</Filter>
+    </ClCompile>
+    <ClCompile Include="foreign\odb\sqlite\simple-object-statements.cxx">
+      <Filter>odb-sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_aboutdialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\versioninfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\currencyvalidator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_importbip32dialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\paymentrequest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\txview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\newaccountdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_networksettingsdialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_newkeychaindialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_passphrasedialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_scriptdialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_signatureview.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_txsearchdialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_unspenttxoutview.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\CoinCore\src\bip39.cpp">
+      <Filter>CoinCore</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\multisig-config.h">
@@ -344,5 +455,10 @@
     <ClInclude Include="inc\stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="src\el\bignum\x86x64\bignum-x86x64.asm">
+      <Filter>Source Files</Filter>
+    </MASM>
   </ItemGroup>
 </Project>
