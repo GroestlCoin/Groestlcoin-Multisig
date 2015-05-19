@@ -21,6 +21,7 @@
 #pragma comment(lib, "Qt5Widgetsd.lib")
 #pragma comment(lib, "Qt5PlatformSupportd.lib")
 #pragma comment(lib, "Qt5Guid.lib")
+#pragma comment(lib, "Qt5Networkd.lib")
 
 #include <windows.h>
 
@@ -58,5 +59,7 @@ tm * __cdecl gmtime_r(const time_t *timer, tm *result) {
 
 }
 
-
+void __cdecl usleep(int useconds) {
+	Sleep((std::max)(1, useconds/1000));
+}
 

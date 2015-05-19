@@ -79,7 +79,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>inc;inc/QtCore;inc/QtWidgets;inc/QtGui;inc/CoinCore;inc/CoinQ;inc/CoinDB;deps\qrencode-3.4.3</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>inc;inc/QtCore;inc/QtWidgets;inc/QtGui;inc/QtNetwork;inc/CoinCore;inc/CoinQ;inc/CoinDB;deps\qrencode-3.4.3</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -91,14 +91,14 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(OutDir);E:\WORK\Q\qtbase\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>inc;inc/QtCore;inc/QtWidgets;inc/QtGui;inc/CoinCore;inc/CoinQ;inc/CoinDB;deps\qrencode-3.4.3</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>inc;inc/QtCore;inc/QtWidgets;inc/QtGui;inc/QtNetwork;inc/CoinCore;inc/CoinQ;inc/CoinDB;deps\qrencode-3.4.3</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
@@ -119,7 +119,7 @@
       <Optimization>MinSpace</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>inc;inc/QtCore;inc/QtWidgets;inc/QtGui;inc/CoinCore;inc/CoinQ;inc/CoinDB;deps\qrencode-3.4.3</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>inc;inc/QtCore;inc/QtWidgets;inc/QtGui;inc/QtNetwork;inc/CoinCore;inc/CoinQ;inc/CoinDB;deps\qrencode-3.4.3</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
@@ -132,7 +132,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(OutDir);E:\WORK\Q\qtbase\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">
@@ -141,7 +141,7 @@
       <Optimization>MinSpace</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>inc;inc/QtCore;inc/QtWidgets;inc/QtGui;inc/CoinCore;inc/CoinQ;inc/CoinDB;deps\qrencode-3.4.3</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>inc;inc/QtCore;inc/QtWidgets;inc/QtGui;inc/QtNetwork;inc/CoinCore;inc/CoinQ;inc/CoinDB;deps\qrencode-3.4.3</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>stdafx.h</ForcedIncludeFiles>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
@@ -242,7 +242,25 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="deps\logger\src\logger.cpp" />
+    <ClCompile Include="deps\qrencode-3.4.3\bitstream.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="deps\qrencode-3.4.3\mask.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="deps\qrencode-3.4.3\mmask.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="deps\qrencode-3.4.3\mqrspec.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>
@@ -255,6 +273,24 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="deps\qrencode-3.4.3\qrinput.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="deps\qrencode-3.4.3\qrspec.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="deps\qrencode-3.4.3\rscode.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="deps\qrencode-3.4.3\split.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>
@@ -305,49 +341,80 @@
     <ClCompile Include="foreign\odb\sqlite\query.cxx" />
     <ClCompile Include="foreign\odb\sqlite\statement.cxx" />
     <ClCompile Include="foreign\odb\transaction.cxx" />
+    <ClCompile Include="res\res_coinvault.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">NotUsing</PrecompiledHeader>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFileName>
+    </ClCompile>
     <ClCompile Include="src\aboutdialog.cpp" />
+    <ClCompile Include="src\acceptlicensedialog.cpp" />
     <ClCompile Include="src\accountmodel.cpp" />
     <ClCompile Include="src\accountview.cpp" />
     <ClCompile Include="src\coinparams.cpp" />
+    <ClCompile Include="src\commandserver.cpp" />
+    <ClCompile Include="src\copyrightinfo.cpp" />
     <ClCompile Include="src\createtxdialog.cpp" />
     <ClCompile Include="src\currencyunitdialog.cpp" />
     <ClCompile Include="src\currencyvalidator.cpp" />
     <ClCompile Include="src\docdir.cpp" />
+    <ClCompile Include="src\entropydialog.cpp" />
     <ClCompile Include="src\entropysource.cpp" />
+    <ClCompile Include="src\filesystem.cpp" />
+    <ClCompile Include="src\hexvalidator.cpp" />
     <ClCompile Include="src\importbip32dialog.cpp" />
+    <ClCompile Include="src\importbip39dialog.cpp" />
     <ClCompile Include="src\keychainbackupdialog.cpp" />
     <ClCompile Include="src\keychainmodel.cpp" />
     <ClCompile Include="src\keychainview.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\mainwindow.cpp" />
     <ClCompile Include="src\moc\moc_aboutdialog.cpp" />
+    <ClCompile Include="src\moc\moc_acceptlicensedialog.cpp" />
     <ClCompile Include="src\moc\moc_accountmodel.cpp" />
     <ClCompile Include="src\moc\moc_accountview.cpp" />
+    <ClCompile Include="src\moc\moc_commandserver.cpp" />
     <ClCompile Include="src\moc\moc_createtxdialog.cpp" />
     <ClCompile Include="src\moc\moc_currencyunitdialog.cpp" />
+    <ClCompile Include="src\moc\moc_currencyvalidator.cpp" />
+    <ClCompile Include="src\moc\moc_entropydialog.cpp" />
+    <ClCompile Include="src\moc\moc_hexvalidator.cpp" />
     <ClCompile Include="src\moc\moc_importbip32dialog.cpp" />
+    <ClCompile Include="src\moc\moc_importbip39dialog.cpp" />
     <ClCompile Include="src\moc\moc_keychainbackupdialog.cpp" />
     <ClCompile Include="src\moc\moc_keychainmodel.cpp" />
     <ClCompile Include="src\moc\moc_keychainview.cpp" />
     <ClCompile Include="src\moc\moc_mainwindow.cpp" />
+    <ClCompile Include="src\moc\moc_networkselectiondialog.cpp" />
     <ClCompile Include="src\moc\moc_networksettingsdialog.cpp" />
+    <ClCompile Include="src\moc\moc_newaccountdialog.cpp" />
     <ClCompile Include="src\moc\moc_newkeychaindialog.cpp" />
     <ClCompile Include="src\moc\moc_passphrasedialog.cpp" />
     <ClCompile Include="src\moc\moc_quicknewaccountdialog.cpp" />
     <ClCompile Include="src\moc\moc_rawtxdialog.cpp" />
     <ClCompile Include="src\moc\moc_requestpaymentdialog.cpp" />
     <ClCompile Include="src\moc\moc_scriptdialog.cpp" />
+    <ClCompile Include="src\moc\moc_scriptmodel.cpp" />
     <ClCompile Include="src\moc\moc_scriptview.cpp" />
     <ClCompile Include="src\moc\moc_setpassphrasedialog.cpp" />
+    <ClCompile Include="src\moc\moc_signatureactions.cpp" />
     <ClCompile Include="src\moc\moc_signaturedialog.cpp" />
+    <ClCompile Include="src\moc\moc_signaturemodel.cpp" />
     <ClCompile Include="src\moc\moc_signatureview.cpp" />
+    <ClCompile Include="src\moc\moc_splashscreen.cpp" />
     <ClCompile Include="src\moc\moc_txactions.cpp" />
     <ClCompile Include="src\moc\moc_txmodel.cpp" />
     <ClCompile Include="src\moc\moc_txsearchdialog.cpp" />
     <ClCompile Include="src\moc\moc_txview.cpp" />
     <ClCompile Include="src\moc\moc_unspenttxoutmodel.cpp" />
     <ClCompile Include="src\moc\moc_unspenttxoutview.cpp" />
+    <ClCompile Include="src\moc\moc_viewbip32dialog.cpp" />
     <ClCompile Include="src\moc\moc_viewbip39dialog.cpp" />
+    <ClCompile Include="src\networkselectiondialog.cpp" />
     <ClCompile Include="src\networksettingsdialog.cpp" />
     <ClCompile Include="src\networksync.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">true</ExcludedFromBuild>
@@ -368,15 +435,20 @@
     <ClCompile Include="src\scriptview.cpp" />
     <ClCompile Include="src\setpassphrasedialog.cpp" />
     <ClCompile Include="src\settings.cpp" />
+    <ClCompile Include="src\signatureactions.cpp" />
     <ClCompile Include="src\signaturedialog.cpp" />
+    <ClCompile Include="src\signaturemodel.cpp" />
     <ClCompile Include="src\signatureview.cpp" />
+    <ClCompile Include="src\splashscreen.cpp" />
     <ClCompile Include="src\stylesheets.cpp" />
     <ClCompile Include="src\txactions.cpp" />
     <ClCompile Include="src\txmodel.cpp" />
+    <ClCompile Include="src\txsearchdialog.cpp" />
     <ClCompile Include="src\txview.cpp" />
     <ClCompile Include="src\unspenttxoutmodel.cpp" />
     <ClCompile Include="src\unspenttxoutview.cpp" />
     <ClCompile Include="src\versioninfo.cpp" />
+    <ClCompile Include="src\viewbip32dialog.cpp" />
     <ClCompile Include="src\viewbip39dialog.cpp" />
   </ItemGroup>
   <ItemGroup>

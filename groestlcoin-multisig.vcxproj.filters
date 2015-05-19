@@ -61,6 +61,9 @@
     <Filter Include="qrencode">
       <UniqueIdentifier>{e6346457-745f-45d3-b7e6-9184698a2f1a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\res">
+      <UniqueIdentifier>{26b3de62-79a3-4374-af29-57ce462800c0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\mainwindow.cpp">
@@ -446,6 +449,105 @@
     </ClCompile>
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\txsearchdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_signatureactions.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\signaturemodel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_scriptmodel.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\signatureactions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_signaturemodel.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_newaccountdialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\commandserver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\qrencode-3.4.3\bitstream.c">
+      <Filter>qrencode</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\qrencode-3.4.3\split.c">
+      <Filter>qrencode</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\qrencode-3.4.3\mqrspec.c">
+      <Filter>qrencode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\copyrightinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\qrencode-3.4.3\qrspec.c">
+      <Filter>qrencode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\splashscreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\hexvalidator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_splashscreen.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\importbip39dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\viewbip32dialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\acceptlicensedialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\networkselectiondialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_currencyvalidator.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_commandserver.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\qrencode-3.4.3\rscode.c">
+      <Filter>qrencode</Filter>
+    </ClCompile>
+    <ClCompile Include="deps\qrencode-3.4.3\mask.c">
+      <Filter>qrencode</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_viewbip32dialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_networkselectiondialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_hexvalidator.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entropydialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_acceptlicensedialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_entropydialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_importbip39dialog.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\filesystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="res\res_coinvault.cpp">
+      <Filter>Source Files\res</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
