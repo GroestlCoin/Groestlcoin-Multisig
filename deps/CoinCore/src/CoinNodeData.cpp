@@ -1502,7 +1502,11 @@ uint64_t Transaction::getTotalSent() const
 
 uchar_vector Transaction::getHashWithAppendedCode(uint32_t code) const
 {
+#if GRS_CFG_GROESTLCOIN
+	return g_hookTxHash(this->getSerialized() + uint_to_vch(code, _BIG_ENDIAN));
+#else
     return sha256_2(this->getSerialized() + uint_to_vch(code, _BIG_ENDIAN));
+#endif
 }
 
 ///////////////////////////////////////////////////////////////////////////////
