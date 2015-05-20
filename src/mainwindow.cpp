@@ -57,6 +57,7 @@
 #include "keychainbackupdialog.h"
 #include "viewbip32dialog.h"
 #include "importbip32dialog.h"
+#include "keychainbackupwizard.h"
 #include "viewbip39dialog.h"
 #include "importbip39dialog.h"
 #include "passphrasedialog.h"
@@ -695,10 +696,32 @@ void MainWindow::newKeychain()
 
             {
                 // TODO: Randomize using user input for entropy
+                secure_bytes_t seed = getRandomBytes(32);
+
+                // Prompt user to write down and verify word list
+                KeychainBackupWizard backupWizard(name, seed, this);
+                if (!backupWizard.exec()) return;
+/*
+                while (true)
+                {
+                    try
+                    {
+                        ImportBIP39Dialog checkDlg(name, this);
+                        if (!checkDlg.exec()) return; // User canceled out
+
+                        secure_bytes_t seed2 = checkDlg.getSeed();
+                        if (seed == seed2) break;
+                        else throw std::runtime_error("Wordlists do not match.");
+                    }
+                    catch (const exception& e)
+                    {
+                        showError(e.what());
+                    } 
+                }
+*/
                 CoinDB::VaultLock lock(synchedVault);
                 if (!synchedVault.isVaultOpen()) throw std::runtime_error("No vault is open.");
-                secure_bytes_t entropy = getRandomBytes(32);
-                synchedVault.getVault()->newKeychain(name.toStdString(), entropy);
+                synchedVault.getVault()->newKeychain(name.toStdString(), seed);
             }
 
             keychainModel->update();
@@ -785,40 +808,96 @@ void MainWindow::lockAllKeychains()
     keychainModel->lockAllKeychains();
 }
 
-void MainWindow::setKeychainPassphrase()
+int MainWindow::setKeychainPassphrase(const QString& keychainName)
 {
-    if (!synchedVault.isVaultOpen())
+    QString name;
+    bool bLocked;
+    bool bEncrypted;
+    if (keychainName.isEmpty())
     {
-        showError(tr("No vault is open."));
-        return;
+        QModelIndex index = keychainSelectionModel->currentIndex();
+        int row = index.row();
+        if (row < 0)
+        {
+            showError(tr("No keychain is selected."));
+            return QDialog::Rejected;
+        }
+
+        bLocked = (keychainModel->getStatus(row) == KeychainModel::LOCKED);
+        bEncrypted = keychainModel->isEncrypted(row);
+
+        QStandardItem* nameItem = keychainModel->item(row, 0);
+        name = nameItem->data(Qt::DisplayRole).toString();
+    }
+    else
+    {
+        if (!keychainModel->exists(keychainName))
+        {
+            showError(tr("Keychain not found."));
+            return QDialog::Rejected;
+        }
+
+        bLocked = keychainModel->isLocked(keychainName);
+        bEncrypted = keychainModel->isEncrypted(keychainName);
+
+        name = keychainName;
+    } 
+
+    try
+    {
+        if (!synchedVault.isVaultOpen()) throw std::runtime_error("No vault is open.");
+        CoinDB::VaultLock lock(synchedVault);
+        if (!synchedVault.isVaultOpen()) throw std::runtime_error("No vault is open.");
+
+        if (bLocked && !unlockKeychain(name)) return QDialog::Rejected;
+
+        SetPassphraseDialog dlg(tr("keychain \"") + name + "\"", tr("WARNING: IF YOU FORGET THIS PASSPHRASE THERE IS NO WAY TO RECOVER IT!!!"), this);
+        while (dlg.exec())
+        {
+            try
+            {
+                QString passphrase = dlg.getPassphrase();
+                if (passphrase.isEmpty())
+                {
+                    QString prompt(tr("You did not enter a passphrase."));
+                    if (bEncrypted)
+                    {
+                        prompt += tr(" Are you sure you want to remove keychain encryption from ") + name + "?";
+                    }
+                    else
+                    {
+                        prompt += tr(" Leave keychain ") + name + tr(" unencrypted?");
+                    } 
+                        
+                    if (QMessageBox::Yes == QMessageBox::question(this, tr("Confirm"), prompt))
+                    {
+                        keychainModel->decryptKeychain(name);
+                        if (bLocked) { lockKeychain(name); }
+                        return QDialog::Accepted;
+                    }
+                }
+                else
+                {
+                    secure_bytes_t hash = passphraseHash(dlg.getPassphrase().toStdString());
+                    keychainModel->encryptKeychain(name, hash); 
+                    if (bLocked) { lockKeychain(name); }
+                    return QDialog::Accepted;
+                }
+            }
+            catch (const std::exception& e)
+            {
+                showError(e.what());
+            }
+        }
+    }
+    catch (const exception& e)
+    {
+        LOGGER(error) << "MainWindow::setKeychainPassphrase - " << e.what() << std::endl;
+        if (bLocked) { lockKeychain(name); }
+        showError(e.what());
     }
 
-    QModelIndex index = keychainSelectionModel->currentIndex();
-    int row = index.row();
-    if (row < 0)
-    {
-        showError(tr("No keychain is selected."));
-        return;
-    }
-
-    int status = keychainModel->getStatus(row);
-
-    if (status == KeychainModel::PUBLIC)
-    {
-        showError(tr("Keychain is nonprivate."));
-        return;
-    }
-
-    QStandardItem* nameItem = keychainModel->item(row, 0);
-    QString name = nameItem->text();
-
-    bool bLocked = status == KeychainModel::LOCKED;
-    bool bEncrypted = keychainModel->isEncrypted(row);
-    if (bLocked && bEncrypted)
-    {
-        showError(tr("Keychain must first be unlocked."));
-        return;
-    }
+    return QDialog::Rejected;
 
     SetPassphraseDialog dlg(tr("keychain \"") + name + "\"", tr("WARNING: IF YOU FORGET THIS PASSPHRASE THERE IS NO WAY TO RECOVER IT!!!"), this);
     while (dlg.exec())
@@ -840,19 +919,17 @@ void MainWindow::setKeychainPassphrase()
                     
                 if (QMessageBox::Yes == QMessageBox::question(this, tr("Confirm"), prompt))
                 {
-                    if (bLocked) { keychainModel->unlockKeychain(name); }
                     keychainModel->decryptKeychain(name);
                     if (bLocked) { keychainModel->lockKeychain(name); }
-                    return;
+                    return QDialog::Accepted;
                 }
             }
             else
             {
                 secure_bytes_t hash = passphraseHash(dlg.getPassphrase().toStdString());
-                if (bLocked) { keychainModel->unlockKeychain(name); }
                 keychainModel->encryptKeychain(name, hash); 
-                keychainModel->lockKeychain(name);
-                return;
+                if (bLocked) { keychainModel->lockKeychain(name); }
+                return QDialog::Accepted;
             }
         }
         catch (const std::exception& e)
@@ -860,6 +937,75 @@ void MainWindow::setKeychainPassphrase()
             showError(e.what());
         }
     }
+
+    return QDialog::Rejected;
+}
+
+int MainWindow::makeKeychainBackup(const QString& keychainName)
+{
+    QString name;
+    bool bLocked;
+    if (keychainName.isEmpty())
+    {
+        QModelIndex index = keychainSelectionModel->currentIndex();
+        int row = index.row();
+        if (row < 0) {
+            showError(tr("No keychain is selected."));
+            return QDialog::Rejected;
+        }
+
+        if (!keychainModel->hasSeed(row))
+        {
+            showError(tr("Entropy seed for keychain is not known. Please use another backup format."));
+            return QDialog::Rejected;
+        }
+
+        bLocked = (keychainModel->getStatus(row) == KeychainModel::LOCKED);
+
+        QStandardItem* nameItem = keychainModel->item(row, 0);
+        name = nameItem->data(Qt::DisplayRole).toString();
+    }
+    else
+    {
+        if (!keychainModel->exists(keychainName))
+        {
+            showError(tr("Keychain not found."));
+            return QDialog::Rejected;
+        }
+
+        if (!keychainModel->hasSeed(keychainName))
+        {
+            showError(tr("Entropy seed for keychain is not known. Please use another backup format."));
+            return QDialog::Rejected;
+        }
+
+        bLocked = keychainModel->isLocked(keychainName);
+
+        name = keychainName;
+    } 
+
+    try
+    {
+        if (!synchedVault.isVaultOpen()) throw std::runtime_error("No vault is open.");
+        CoinDB::VaultLock lock(synchedVault);
+        if (!synchedVault.isVaultOpen()) throw std::runtime_error("No vault is open.");
+
+        if (bLocked && !unlockKeychain(name)) return QDialog::Rejected;
+
+        secure_bytes_t seed = synchedVault.getVault()->exportBIP39(name.toStdString());
+
+        KeychainBackupWizard wizard(name, seed, this);
+        if (bLocked) { lockKeychain(name); }
+        return wizard.exec();
+    }
+    catch (const exception& e)
+    {
+        LOGGER(error) << "MainWindow::makeKeychainBackup - " << e.what() << std::endl;
+        if (bLocked) { lockKeychain(name); }
+        showError(e.what());
+    }
+
+    return QDialog::Rejected;
 }
 
 void MainWindow::importKeychain(QString fileName)
@@ -1113,39 +1259,6 @@ void MainWindow::viewBIP39()
     }
 }
 
-void MainWindow::backupKeychain()
-{
-    QModelIndex index = keychainSelectionModel->currentIndex();
-    int row = index.row();
-    if (row < 0) {
-        showError(tr("No keychain is selected."));
-        return;
-    }
-
-    QStandardItem* nameItem = keychainModel->item(row, 0);
-    QString name = nameItem->data(Qt::DisplayRole).toString();
-
-    try {
-        bytes_t extendedKey;
-
-        if (keychainModel->isPrivate(name)) {
-            // TODO: prompt user for decryption key
-            extendedKey = keychainModel->getExtendedKeyBytes(name, true);
-        }
-        else {
-            extendedKey = keychainModel->getExtendedKeyBytes(name);
-        }
-
-        KeychainBackupDialog dlg(tr("Keychain information"));
-        dlg.setExtendedKey(extendedKey);
-        dlg.exec();
-    }
-    catch (const exception& e) {
-        LOGGER(debug) << "MainWindow::backupKeychain - " << e.what() << std::endl;
-        showError(e.what());
-    }
-}
-
 void MainWindow::updateCurrentKeychain(const QModelIndex& current, const QModelIndex& /*previous*/)
 {
     int row = current.row();
@@ -1155,21 +1268,20 @@ void MainWindow::updateCurrentKeychain(const QModelIndex& current, const QModelI
         viewPrivateBIP32Action->setEnabled(false);
         viewPublicBIP32Action->setEnabled(false);
         viewBIP39Action->setEnabled(false);
-        backupKeychainAction->setEnabled(false);
     }
     else {
         int status = keychainModel->getStatus(row);
-        bool hasSeed = keychainModel->hasSeed(row); 
+        bool hasSeed = keychainModel->hasSeed(row);
 
         unlockKeychainAction->setEnabled(status == KeychainModel::LOCKED);
         lockKeychainAction->setEnabled(status == KeychainModel::UNLOCKED);
-        setKeychainPassphraseAction->setEnabled(status == KeychainModel::UNLOCKED || (status == KeychainModel::LOCKED && !keychainModel->isEncrypted(row)));
+        setKeychainPassphraseAction->setEnabled(status != KeychainModel::PUBLIC);
         exportPrivateKeychainAction->setEnabled(status != KeychainModel::PUBLIC);
         exportPublicKeychainAction->setEnabled(true);
         viewPrivateBIP32Action->setEnabled(status != KeychainModel::PUBLIC);
         viewPublicBIP32Action->setEnabled(true);
         viewBIP39Action->setEnabled(status != KeychainModel::PUBLIC && hasSeed);
-        backupKeychainAction->setEnabled(true);
+        makeKeychainBackupAction->setEnabled(status != KeychainModel::PUBLIC && hasSeed);
     }
 }
 
@@ -2061,6 +2173,11 @@ void MainWindow::createActions()
     setKeychainPassphraseAction->setEnabled(false);
     connect(setKeychainPassphraseAction, SIGNAL(triggered()), this, SLOT(setKeychainPassphrase()));
 
+    makeKeychainBackupAction = new QAction(tr("Make Keychain Backup..."), this);
+    makeKeychainBackupAction->setStatusTip(tr("Open keychain backup wizard"));
+    makeKeychainBackupAction->setEnabled(false);
+    connect(makeKeychainBackupAction, SIGNAL(triggered()), this, SLOT(makeKeychainBackup()));
+
     importPrivateAction = new QAction(tr("Private Imports"), this);
     importPrivateAction->setCheckable(true);
     importPrivateAction->setStatusTip(tr("Import private keys if available"));
@@ -2116,11 +2233,6 @@ void MainWindow::createActions()
     viewBIP39Action->setStatusTip(tr("View private BIP39 wordlist"));
     viewBIP39Action->setEnabled(false);
     connect(viewBIP39Action, SIGNAL(triggered()), this, SLOT(viewBIP39()));
-
-    backupKeychainAction = new QAction(tr("Backup Keychain..."), this);
-    backupKeychainAction->setStatusTip(tr("Make paper backup"));
-    backupKeychainAction->setEnabled(false);
-    connect(backupKeychainAction, SIGNAL(triggered()), this, SLOT(backupKeychain()));
 
     // account actions
     quickNewAccountAction = new QAction(QIcon(":/icons/magicwand.png"), tr("Account &Wizard..."), this);
@@ -2331,6 +2443,9 @@ void MainWindow::createMenus()
     keychainMenu->addAction(lockKeychainAction);
     keychainMenu->addAction(lockAllKeychainsAction);
     keychainMenu->addAction(setKeychainPassphraseAction);
+    keychainMenu->addSeparator();
+    keychainMenu->addAction(makeKeychainBackupAction);
+
 /*
     keychainMenu->addSeparator()->setText(tr("Import Mode"));
     keychainMenu->addAction(importPrivateAction);
@@ -2354,10 +2469,6 @@ void MainWindow::createMenus()
 
     keychainMenu->addSeparator();
     keychainMenu->addAction(quickNewAccountAction);
-/*
-    keychainMenu->addSeparator();
-    keychainMenu->addAction(backupKeychainAction);
-*/
 
     networkMenu = menuBar()->addMenu(tr("&Network"));
     networkMenu->addAction(connectAction);
