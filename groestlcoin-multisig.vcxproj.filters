@@ -255,22 +255,7 @@
     <ClCompile Include="foreign\odb\result.cxx">
       <Filter>odb</Filter>
     </ClCompile>
-    <ClCompile Include="deps\CoinCore\src\hashfunc\blake.c">
-      <Filter>CoinCore\hashfunc</Filter>
-    </ClCompile>
-    <ClCompile Include="deps\CoinCore\src\hashfunc\bmw.c">
-      <Filter>CoinCore\hashfunc</Filter>
-    </ClCompile>
     <ClCompile Include="deps\CoinCore\src\hashfunc\groestl.c">
-      <Filter>CoinCore\hashfunc</Filter>
-    </ClCompile>
-    <ClCompile Include="deps\CoinCore\src\hashfunc\jh.c">
-      <Filter>CoinCore\hashfunc</Filter>
-    </ClCompile>
-    <ClCompile Include="deps\CoinCore\src\hashfunc\keccak.c">
-      <Filter>CoinCore\hashfunc</Filter>
-    </ClCompile>
-    <ClCompile Include="deps\CoinCore\src\hashfunc\skein.c">
       <Filter>CoinCore\hashfunc</Filter>
     </ClCompile>
     <ClCompile Include="src\moc\moc_txmodel.cpp">
@@ -341,9 +326,6 @@
     </ClCompile>
     <ClCompile Include="src\moc\moc_keychainview.cpp">
       <Filter>Source Files\moc</Filter>
-    </ClCompile>
-    <ClCompile Include="deps\CoinCore\src\scrypt\scrypt.cpp">
-      <Filter>CoinCore\hashfunc</Filter>
     </ClCompile>
     <ClCompile Include="foreign\odb\sqlite\error.cxx">
       <Filter>odb-sqlite</Filter>

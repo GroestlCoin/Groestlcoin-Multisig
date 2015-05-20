@@ -1331,6 +1331,18 @@ Transaction::Transaction(const string& hex)
     this->setSerialized(bytes);
 }
 
+#if GRS_CFG_GROESTLCOIN
+const uchar_vector& Transaction::getHash() const {
+	return hash_ = g_hookTxHash(getSerialized());
+}
+
+const uchar_vector& Transaction::getHashLittleEndian() const {
+	return hashLittleEndian_ = g_hookTxHash(getSerialized()).getReverse();
+}
+
+#endif // GRS_CFG_GROESTLCOIN
+
+
 uint64_t Transaction::getSize() const
 {
     uint64_t count = 8; // version + locktime

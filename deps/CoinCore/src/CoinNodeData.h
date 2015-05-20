@@ -640,6 +640,12 @@ public:
     Transaction(const Transaction& tx)
         : version(tx.version), inputs(tx.inputs), outputs(tx.outputs), lockTime(tx.lockTime) { }
 
+
+#if GRS_CFG_GROESTLCOIN
+	const uchar_vector& getHash() const override;
+	const uchar_vector& getHashLittleEndian() const override;
+#endif
+
     const uchar_vector& hash() const { return getHashLittleEndian(); }
 
     const char* getCommand() const { return "tx"; }

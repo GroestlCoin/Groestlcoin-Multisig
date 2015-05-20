@@ -26,7 +26,8 @@
 NetworkSync::NetworkSync()
     : work(io_service), io_service_thread(NULL), peer(io_service), blockFilter(&blockTree), resynching(false), isConnected_(false)
 {
-    Coin::CoinBlockHeader::setHashFunc(COIN_PARAMS::BLOCK_HEADER_HASH_FUNCTION);
+    //!!!P Coin::CoinBlockHeader::setHashFunc(COIN_PARAMS::BLOCK_HEADER_HASH_FUNCTION);
+	Coin::CoinBlockHeader::setHashFunc(groestlcoin_hash);
 
     io_service_thread = new boost::thread(boost::bind(&CoinQ::io_service_t::run, &io_service));
 

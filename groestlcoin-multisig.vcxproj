@@ -172,26 +172,6 @@
     <ClCompile Include="deps\CoinCore\src\bip39.cpp" />
     <ClCompile Include="deps\CoinCore\src\BloomFilter.cpp" />
     <ClCompile Include="deps\CoinCore\src\CoinNodeData.cpp" />
-    <ClCompile Include="deps\CoinCore\src\hashfunc\blake.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">NotUsing</PrecompiledHeader>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">$(IntDir)</ObjectFileName>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">$(IntDir)</ObjectFileName>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFileName>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFileName>
-    </ClCompile>
-    <ClCompile Include="deps\CoinCore\src\hashfunc\bmw.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">NotUsing</PrecompiledHeader>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">$(IntDir)</ObjectFileName>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">$(IntDir)</ObjectFileName>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFileName>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFileName>
-    </ClCompile>
     <ClCompile Include="deps\CoinCore\src\hashfunc\groestl.c">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
@@ -201,41 +181,18 @@
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">$(IntDir)</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFileName>
-    </ClCompile>
-    <ClCompile Include="deps\CoinCore\src\hashfunc\jh.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">NotUsing</PrecompiledHeader>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">$(IntDir)</ObjectFileName>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">$(IntDir)</ObjectFileName>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFileName>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFileName>
-    </ClCompile>
-    <ClCompile Include="deps\CoinCore\src\hashfunc\keccak.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">NotUsing</PrecompiledHeader>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">$(IntDir)</ObjectFileName>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">$(IntDir)</ObjectFileName>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFileName>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFileName>
-    </ClCompile>
-    <ClCompile Include="deps\CoinCore\src\hashfunc\skein.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">NotUsing</PrecompiledHeader>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">$(IntDir)</ObjectFileName>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">$(IntDir)</ObjectFileName>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">$(IntDir)</ObjectFileName>
-      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">$(IntDir)</ObjectFileName>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">MaxSpeed</Optimization>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">Speed</FavorSizeOrSpeed>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">MaxSpeed</Optimization>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">Speed</FavorSizeOrSpeed>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">MaxSpeed</Optimization>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">Speed</FavorSizeOrSpeed>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">MaxSpeed</Optimization>
+      <FavorSizeOrSpeed Condition="'$(Configuration)|$(Platform)'=='R_St|x64'">Speed</FavorSizeOrSpeed>
     </ClCompile>
     <ClCompile Include="deps\CoinCore\src\hdkeys.cpp" />
     <ClCompile Include="deps\CoinCore\src\IPv6.cpp" />
     <ClCompile Include="deps\CoinCore\src\MerkleTree.cpp" />
-    <ClCompile Include="deps\CoinCore\src\scrypt\scrypt.cpp" />
     <ClCompile Include="deps\CoinCore\src\secp256k1.cpp" />
     <ClCompile Include="deps\CoinDB\src\Schema.cpp" />
     <ClCompile Include="deps\CoinDB\src\SynchedVault.cpp" />

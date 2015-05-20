@@ -19,7 +19,8 @@ uchar_vector groestlcoin_hash(const uchar_vector& data) {
 
 PFN_MessageHash
 	g_hookMessageHash = &groestlcoin_hash,
-	g_hookAddressHash = &groestlcoin_hash;
+	g_hookAddressHash = &groestlcoin_hash,
+	g_hookTxHash = &sha256;
 
 #pragma comment(lib, "openssl")
 #pragma comment(lib, "sqlite3")
