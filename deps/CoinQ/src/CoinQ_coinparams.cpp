@@ -23,6 +23,9 @@ NetworkSelector::NetworkSelector(const std::string& network_name)
     network_map_.insert(NetworkPair("testnet3", getTestnet3Params()));
     network_map_.insert(NetworkPair("litecoin", getLitecoinParams()));
     network_map_.insert(NetworkPair("quarkcoin", getQuarkcoinParams()));
+#if GRS_CFG_GROESTLCOIN
+    network_map_.insert(NetworkPair("groestlcoin", getGroestlcoinParams()));
+#endif
 
     if (!network_name.empty()) { select(network_name); }
 }
@@ -58,6 +61,16 @@ void NetworkSelector::select(const std::string& network_name)
     if (!network_map_.count(lower_network_name)) throw NetworkSelectorNetworkNotRecognizedException(lower_network_name);
 
     selected_ = lower_network_name;
+
+#if GRS_CFG_GROESTLCOIN
+	if (selected_ == "groestlcoin") {
+		g_hookMessageHash = &groestlcoin_hash;
+		g_hookAddressHash = &groestlcoin_hash;
+	} else {
+		g_hookMessageHash = &sha256_2;
+		g_hookAddressHash = &sha256_2;
+	}
+#endif
 }
 
 
@@ -187,5 +200,32 @@ const CoinParams bluecoinParams(
 ); 
 const CoinParams& getBluecoinParams() { return bluecoinParams; }
 */
-    
+
+#if GRS_CFG_GROESTLCOIN
+const CoinParams groestlcoinParams(
+	0xD4B4BEF9ul,
+	70001,
+	"1331",
+	36,
+	5,
+	"GroestlCoin",
+	"groestlcoin",
+	100000000,
+	"GRS",
+	105000000,
+	1000000,
+	&groestlcoin_hash,
+	&groestlcoin_hash,
+	Coin::CoinBlockHeader(
+		112,
+		1395342829,
+		0x1e0fffff,
+		220035,
+		uchar_vector(32, 0),
+		uchar_vector("00000ac5927c594d49cc0bdb81759d0da8297eb614683d3acb62f0703b639023")
+		)
+	);
+const CoinParams& getGroestlcoinParams() { return groestlcoinParams; }
+#endif // GRS_CFG_GROESTLCOIN
+
 }

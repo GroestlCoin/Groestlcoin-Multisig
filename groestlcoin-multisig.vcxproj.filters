@@ -64,6 +64,9 @@
     <Filter Include="Source Files\res">
       <UniqueIdentifier>{26b3de62-79a3-4374-af29-57ce462800c0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CoinCore\H">
+      <UniqueIdentifier>{5e1f0459-f891-4ed1-a058-a663f9317625}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\mainwindow.cpp">
@@ -556,6 +559,12 @@
     </ClInclude>
     <ClInclude Include="inc\stdafx.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\CoinCore\src\Base58Check.h">
+      <Filter>CoinCore\H</Filter>
+    </ClInclude>
+    <ClInclude Include="deps\CoinCore\src\hash.h">
+      <Filter>CoinCore\H</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -123,4 +123,16 @@ inline uchar_vector scrypt_1024_1_1_256(const uchar_vector& data)
     return uchar_vector((unsigned char*)&hash, (unsigned char*)&hash + 32);
 }
 
+#if GRS_CFG_GROESTLCOIN
+
+uchar_vector groestlcoin_hash(const uchar_vector& data);
+
+typedef uchar_vector(*PFN_MessageHash)(const uchar_vector& data);
+extern PFN_MessageHash g_hookMessageHash;
+extern PFN_MessageHash g_hookAddressHash;
+
+#endif // GRS_CFG_GROESTLCOIN
+
+
+
 #endif

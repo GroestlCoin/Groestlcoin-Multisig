@@ -23,7 +23,12 @@
 
 const std::string DEFAULT_DATA_DIR = "CoinDB";
 const std::string DEFAULT_CONFIG_FILE = "coindb.conf";
+
+#if GRS_CFG_GROESTLCOIN
+const std::string DEFAULT_NETWORK_NAME = "GroestlCoin";
+#else
 const std::string DEFAULT_NETWORK_NAME = "bitcoin";
+#endif
 
 class CoinDBConfig
 {

@@ -109,7 +109,11 @@ string satoshisToBtcString(uint64_t satoshis, bool trailing_zeros)
 //
 const uchar_vector& CoinNodeStructure::getHash() const
 {
+#if GRS_CFG_GROESTLCOIN
+    hash_ = g_hookMessageHash(getSerialized());
+#else
     hash_ = sha256_2(getSerialized());
+#endif
     return hash_;
 }
 

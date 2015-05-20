@@ -460,6 +460,8 @@
     <ClCompile Include="src\viewbip39dialog.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="deps\CoinCore\src\Base58Check.h" />
+    <ClInclude Include="deps\CoinCore\src\hash.h" />
     <ClInclude Include="inc\multisig-config.h" />
     <ClInclude Include="inc\stdafx.h" />
   </ItemGroup>

@@ -52,7 +52,11 @@ inline std::string toBase58Check(const std::vector<unsigned char>& payload, unsi
     uchar_vector data;
     data.push_back(version);                                        // prepend version byte
     data += payload;
+#if GRS_CFG_GROESTLCOIN
+	uchar_vector checksum = g_hookAddressHash(data);
+#else
     uchar_vector checksum = sha256_2(data);
+#endif
     checksum.assign(checksum.begin(), checksum.begin() + 4);        // compute checksum
     data += checksum;                                               // append checksum
     BigInt bn(data);
@@ -66,8 +70,12 @@ inline std::string toBase58Check(const std::vector<unsigned char>& payload, cons
     uchar_vector data;
     data += version;                                            // prepend version byte
     data += payload;
-    uchar_vector checksum = sha256_2(data);
-    checksum.assign(checksum.begin(), checksum.begin() + 4);        // compute checksum
+#if GRS_CFG_GROESTLCOIN
+	uchar_vector checksum = g_hookAddressHash(data);
+#else
+	uchar_vector checksum = sha256_2(data);
+#endif
+	checksum.assign(checksum.begin(), checksum.begin() + 4);        // compute checksum
     data += checksum;                                               // append checksum
     BigInt bn(data);
     std::string base58check = bn.getInBase(58, _base58chars);             // convert to base58
@@ -87,7 +95,11 @@ inline bool fromBase58Check(const std::string& base58check, std::vector<unsigned
     bytes.assign(bytes.begin(), bytes.end() - 4);                           // split string into payload part and checksum part
     uchar_vector leading0s(countLeading0s(base58check, _base58chars[0]), 0); // prepend leading 0's
     bytes = leading0s + bytes;
-    uchar_vector hashBytes = sha256_2(bytes);
+#if GRS_CFG_GROESTLCOIN
+	uchar_vector hashBytes = g_hookAddressHash(data);
+#else
+	uchar_vector hashBytes = sha256_2(data);
+#endif
     hashBytes.assign(hashBytes.begin(), hashBytes.begin() + 4);
     if (hashBytes != checksum) return false;                                // verify checksum
     version = bytes[0];
@@ -104,7 +116,11 @@ inline bool fromBase58Check(const std::string& base58check, std::vector<unsigned
     bytes.assign(bytes.begin(), bytes.end() - 4);                           // split string into payload part and checksum part
     uchar_vector leading0s(countLeading0s(base58check, _base58chars[0]), 0); // prepend leading 0's
     bytes = leading0s + bytes;
-    uchar_vector hashBytes = sha256_2(bytes);
+#if GRS_CFG_GROESTLCOIN
+	uchar_vector hashBytes = g_hookAddressHash(data);
+#else
+	uchar_vector hashBytes = sha256_2(data);
+#endif
     hashBytes.assign(hashBytes.begin(), hashBytes.begin() + 4);
     if (hashBytes != checksum) return false;                                // verify checksum
     payload.assign(bytes.begin(), bytes.end());
@@ -119,7 +135,11 @@ inline bool isBase58CheckValid(const std::string& base58check, const char* _base
     bytes.assign(bytes.begin(), bytes.end() - 4);                           // split string into payload part and checksum part
     uchar_vector leading0s(countLeading0s(base58check, _base58chars[0]), 0); // prepend leading 0's
     bytes = leading0s + bytes;
-    uchar_vector hashBytes = sha256_2(bytes);
+#if GRS_CFG_GROESTLCOIN
+	uchar_vector hashBytes = g_hookAddressHash(data);
+#else
+	uchar_vector hashBytes = sha256_2(data);
+#endif
     hashBytes.assign(hashBytes.begin(), hashBytes.begin() + 4);
     return (hashBytes == checksum);                                         // verify checksum
 }

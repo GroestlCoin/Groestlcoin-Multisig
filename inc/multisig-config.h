@@ -29,3 +29,5 @@
 #define MICRO_VERSION 3
 #define VERSION "3.4.3"
 
+#define GRS_CFG_GROESTLCOIN 1
+
