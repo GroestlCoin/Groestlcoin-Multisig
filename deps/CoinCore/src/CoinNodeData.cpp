@@ -669,7 +669,8 @@ VersionMessage::VersionMessage(
     nonce_(nonce),
     subVersion_(subVersion),
     startHeight_(startHeight),
-    relay_(relay)
+    relay_(relay),
+	hasRelay_(true)
 {
 }
 
@@ -690,7 +691,7 @@ uchar_vector VersionMessage::getSerialized() const
     rval += uint_to_vch(nonce_, _BIG_ENDIAN);
     rval += subVersion_.getSerialized();
     rval += uint_to_vch(startHeight_, _BIG_ENDIAN);
-    if (version_ >= 70001) { rval.push_back(relay_ ? 1 : 0); }
+    if (hasRelay_) { rval.push_back(relay_ ? 1 : 0); }
     return rval;
 }
 
@@ -719,13 +720,20 @@ void VersionMessage::setSerialized(const uchar_vector& bytes)
     if (bytes.size() < pos + 4)
         throw runtime_error("Invalid data - VersionMessage missing startHeight.");
     startHeight_ = vch_to_uint<uint32_t>(uchar_vector(bytes.begin() + pos, bytes.begin() + pos + 4), _BIG_ENDIAN);
-    if (version_ >= 70001)
-    {
-        pos += 4;
-        relay_ = (bytes[pos] != 0);
+	if (version_ >= 70001)
+	{
+		pos += 4;
+		if (pos < bytes.size()) {
+			relay_ = bytes[pos] != 0;
+			hasRelay_ = true;
+		} else {
+			relay_ =  1;
+			hasRelay_ = false;
+		}
     }
     else
     {
+		hasRelay_ = false;
         relay_ = true;
     }
 }

@@ -42,3 +42,11 @@ private:
 // Singleton
 extern const DefaultSettings& getDefaultSettings();
 
+#if GRS_CFG_GROESTLCOIN
+#	define GRS_SETTINGS "GroestCoin-Multisig"
+#else
+#	define GRS_SETTINGS "Ciphrex"
+#endif
+
+
+

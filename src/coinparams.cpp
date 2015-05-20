@@ -12,7 +12,12 @@
 
 #include <stdexcept>
 
-#define DEFAULT_NETWORK "bitcoin"
+
+#if GRS_CFG_GROESTLCOIN
+#	define DEFAULT_NETWORK "groestlcoin"
+#else
+#	define DEFAULT_NETWORK "bitcoin"
+#endif
 
 CoinQ::NetworkSelector selector(DEFAULT_NETWORK);
 CoinQ::NetworkSelector& getNetworkSelector() { return selector; }

@@ -19,12 +19,13 @@ namespace CoinQ
 
 NetworkSelector::NetworkSelector(const std::string& network_name)
 {
-    network_map_.insert(NetworkPair("bitcoin", getBitcoinParams()));
-    network_map_.insert(NetworkPair("testnet3", getTestnet3Params()));
-    network_map_.insert(NetworkPair("litecoin", getLitecoinParams()));
-    network_map_.insert(NetworkPair("quarkcoin", getQuarkcoinParams()));
 #if GRS_CFG_GROESTLCOIN
     network_map_.insert(NetworkPair("groestlcoin", getGroestlcoinParams()));
+#else
+	network_map_.insert(NetworkPair("bitcoin", getBitcoinParams()));
+	network_map_.insert(NetworkPair("testnet3", getTestnet3Params()));
+	network_map_.insert(NetworkPair("litecoin", getLitecoinParams()));
+	network_map_.insert(NetworkPair("quarkcoin", getQuarkcoinParams()));
 #endif
 
     if (!network_name.empty()) { select(network_name); }

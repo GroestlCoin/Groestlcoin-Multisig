@@ -96,9 +96,9 @@ inline bool fromBase58Check(const std::string& base58check, std::vector<unsigned
     uchar_vector leading0s(countLeading0s(base58check, _base58chars[0]), 0); // prepend leading 0's
     bytes = leading0s + bytes;
 #if GRS_CFG_GROESTLCOIN
-	uchar_vector hashBytes = g_hookAddressHash(data);
+	uchar_vector hashBytes = g_hookAddressHash(bytes);
 #else
-	uchar_vector hashBytes = sha256_2(data);
+	uchar_vector hashBytes = sha256_2(bytes);
 #endif
     hashBytes.assign(hashBytes.begin(), hashBytes.begin() + 4);
     if (hashBytes != checksum) return false;                                // verify checksum
@@ -117,9 +117,9 @@ inline bool fromBase58Check(const std::string& base58check, std::vector<unsigned
     uchar_vector leading0s(countLeading0s(base58check, _base58chars[0]), 0); // prepend leading 0's
     bytes = leading0s + bytes;
 #if GRS_CFG_GROESTLCOIN
-	uchar_vector hashBytes = g_hookAddressHash(data);
+	uchar_vector hashBytes = g_hookAddressHash(bytes);
 #else
-	uchar_vector hashBytes = sha256_2(data);
+	uchar_vector hashBytes = sha256_2(bytes);
 #endif
     hashBytes.assign(hashBytes.begin(), hashBytes.begin() + 4);
     if (hashBytes != checksum) return false;                                // verify checksum
@@ -136,9 +136,9 @@ inline bool isBase58CheckValid(const std::string& base58check, const char* _base
     uchar_vector leading0s(countLeading0s(base58check, _base58chars[0]), 0); // prepend leading 0's
     bytes = leading0s + bytes;
 #if GRS_CFG_GROESTLCOIN
-	uchar_vector hashBytes = g_hookAddressHash(data);
+	uchar_vector hashBytes = g_hookAddressHash(bytes);
 #else
-	uchar_vector hashBytes = sha256_2(data);
+	uchar_vector hashBytes = sha256_2(bytes);
 #endif
     hashBytes.assign(hashBytes.begin(), hashBytes.begin() + 4);
     return (hashBytes == checksum);                                         // verify checksum

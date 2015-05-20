@@ -56,7 +56,7 @@ void selectNetwork(const std::string& networkName)
 
 void setCurrencyUnit()
 {
-    QSettings settings("Ciphrex", getDefaultSettings().getNetworkSettingsPath());
+    QSettings settings(GRS_SETTINGS, getDefaultSettings().getNetworkSettingsPath());
     QString prefix = settings.value("currencyunitprefix", "").toString();
     setCurrencyUnitPrefix(prefix);
 }

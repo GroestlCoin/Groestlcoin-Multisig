@@ -348,7 +348,7 @@ void MainWindow::updateFonts(int fontSize)
     keychainView->updateColumns();
     txView->updateColumns();
             
-    QSettings settings("Ciphrex", getDefaultSettings().getSettingsRoot());
+    QSettings settings(GRS_SETTINGS, getDefaultSettings().getSettingsRoot());
     settings.setValue("fontsize", fontSize);
 }
 
@@ -1907,7 +1907,7 @@ void MainWindow::networkSettings()
             disconnectAction->setText(tr("Disconnect from ") + host);
         }
 
-        QSettings settings("Ciphrex", getDefaultSettings().getNetworkSettingsPath());
+        QSettings settings(GRS_SETTINGS, getDefaultSettings().getNetworkSettingsPath());
         settings.setValue("host", host);
         settings.setValue("port", port);
     }
@@ -2437,7 +2437,7 @@ void MainWindow::createStatusBar()
 void MainWindow::loadSettings()
 {
     {
-        QSettings settings("Ciphrex", getDefaultSettings().getSettingsRoot());
+        QSettings settings(GRS_SETTINGS, getDefaultSettings().getSettingsRoot());
         QPoint pos = settings.value("pos", QPoint(200, 200)).toPoint();
         QSize size = settings.value("size", QSize(800, 400)).toSize();
         resize(size);
@@ -2449,14 +2449,18 @@ void MainWindow::loadSettings()
     }
 
     {
-        QSettings settings("Ciphrex", getDefaultSettings().getNetworkSettingsPath());
-        currencyUnitPrefix = settings.value("currencyunitprefix", "").toString();
+		QSettings settings(GRS_SETTINGS, getDefaultSettings().getNetworkSettingsPath());
+		currencyUnitPrefix = settings.value("currencyunitprefix", "").toString();
         showTrailingDecimals = settings.value("showtrailingdecimals", true).toBool();
         setTrailingDecimals(showTrailingDecimals);
         blockTreeFile = settings.value("blocktreefile", getDefaultSettings().getDataDir() + "/blocktree.dat").toString();
-        host = settings.value("host", "localhost").toString();
         port = settings.value("port", getCoinParams().default_port()).toInt();
         autoConnect = settings.value("autoconnect", false).toBool();
+#if GRS_CFG_GROESTLCOIN
+		host = settings.value("host", "groestlcoin.org").toString();
+#else
+		host = settings.value("host", "localhost").toString();
+#endif
 
         setDocDir(settings.value("lastvaultdir", getDefaultSettings().getDocumentDir()).toString());
     }
@@ -2465,14 +2469,14 @@ void MainWindow::loadSettings()
 void MainWindow::saveSettings()
 {
     {
-        QSettings settings("Ciphrex", getDefaultSettings().getSettingsRoot());
+        QSettings settings(GRS_SETTINGS, getDefaultSettings().getSettingsRoot());
         settings.setValue("pos", pos());
         settings.setValue("size", size());
         settings.setValue("licenseaccepted", licenseAccepted);
     }
 
     {
-        QSettings settings("Ciphrex", getDefaultSettings().getNetworkSettingsPath());
+        QSettings settings(GRS_SETTINGS, getDefaultSettings().getNetworkSettingsPath());
         settings.setValue("currencyunitprefix", currencyUnitPrefix);
         settings.setValue("showtrailingdecimals", showTrailingDecimals);
         settings.setValue("blocktreefile", blockTreeFile);
@@ -2485,7 +2489,7 @@ void MainWindow::saveSettings()
 
 void MainWindow::clearSettings()
 {
-    QSettings settings("Ciphrex", getDefaultSettings().getSettingsRoot());
+    QSettings settings(GRS_SETTINGS, getDefaultSettings().getSettingsRoot());
     settings.clear();
     loadSettings();
 }
@@ -2505,7 +2509,7 @@ void MainWindow::addToRecents(const QString& fileName)
 
 void MainWindow::loadRecents()
 {
-    QSettings settings("Ciphrex", getDefaultSettings().getNetworkSettingsPath());
+    QSettings settings(GRS_SETTINGS, getDefaultSettings().getNetworkSettingsPath());
 
     recents.clear();
     int nRecents = settings.beginReadArray("recents");
@@ -2521,7 +2525,7 @@ void MainWindow::loadRecents()
 
 void MainWindow::saveRecents()
 {
-    QSettings settings("Ciphrex", getDefaultSettings().getNetworkSettingsPath());
+    QSettings settings(GRS_SETTINGS, getDefaultSettings().getNetworkSettingsPath());
 
     settings.beginWriteArray("recents");
     for (int i = 0; i < recents.size(); i++)

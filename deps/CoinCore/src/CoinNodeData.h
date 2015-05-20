@@ -301,6 +301,7 @@ private:
     VarString subVersion_;
     int32_t startHeight_;
     bool relay_;
+	bool hasRelay_;
 };
 
 class BlankMessage : public CoinNodeStructure
