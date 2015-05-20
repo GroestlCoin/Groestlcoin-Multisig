@@ -1340,6 +1340,11 @@ const uchar_vector& Transaction::getHashLittleEndian() const {
 	return hashLittleEndian_ = g_hookTxHash(getSerialized()).getReverse();
 }
 
+uint32_t Transaction::getChecksum() const {
+	uchar_vector h = g_hookMessageHash(getSerialized());
+	return vch_to_uint<uint32_t>(uchar_vector(h.begin(), h.begin() + 4), _BIG_ENDIAN);
+}
+
 #endif // GRS_CFG_GROESTLCOIN
 
 

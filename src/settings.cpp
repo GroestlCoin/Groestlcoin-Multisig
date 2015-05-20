@@ -16,12 +16,10 @@
 
 void DefaultSettings::load()
 {
-    m_appName = "mSIGNA for ";
-    m_appName += getCoinParams().network_name();
+    m_appName = "GroestlCoin Multisig";
     m_settingsRoot = "CoinVault";
     m_networkSettingsPath = m_settingsRoot + "/" + getCoinParams().network_name();
-    QString dataDirName = "mSIGNA_";
-    dataDirName += getCoinParams().network_name();
+    QString dataDirName = "GroestlCoin-Multisig";
     m_dataDir = QString::fromStdString(getDefaultDataDir(dataDirName.toStdString()));
     m_documentDir = QDir::homePath();
     m_base58Versions[0] = getCoinParams().pay_to_pubkey_hash_version();

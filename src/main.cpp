@@ -68,8 +68,8 @@ int main(int argc, char* argv[])
     Q_INIT_RESOURCE(coinvault);
 
     QApplication app(argc, argv);
-    app.setOrganizationName("Ciphrex");
-    app.setOrganizationDomain("ciphrex.com");
+    app.setOrganizationName("Groestlcoin");
+    app.setOrganizationDomain("groestlcoin.org");
 
     // Check whether another instance is already running. If so, send it commands and exit.    
     CommandServer commandServer(&app);

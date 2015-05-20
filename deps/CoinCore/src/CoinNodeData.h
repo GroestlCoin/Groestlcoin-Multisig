@@ -644,6 +644,7 @@ public:
 #if GRS_CFG_GROESTLCOIN
 	const uchar_vector& getHash() const override;
 	const uchar_vector& getHashLittleEndian() const override;
+	uint32_t getChecksum() const override;
 #endif
 
     const uchar_vector& hash() const { return getHashLittleEndian(); }

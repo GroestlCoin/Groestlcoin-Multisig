@@ -11,7 +11,7 @@
 #include "copyrightinfo.h"
 
 // Definitions
-const QString COPYRIGHTTEXT("Copyright (c) 2013-2015 Ciphrex Corporation, All Rights Reserved");
+const QString COPYRIGHTTEXT("Copyright (c) 2015 GroestlCoin");
 
 // Accessors
 const QString& getCopyrightText() { return COPYRIGHTTEXT; }
