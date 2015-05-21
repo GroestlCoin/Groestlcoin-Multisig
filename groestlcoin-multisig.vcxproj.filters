@@ -141,7 +141,7 @@
     <ClCompile Include="deps\CoinQ\src\CoinQ_netsync.cpp">
       <Filter>CoinQ</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_accountmodel.cpp">
+    <ClCompile Include="src\moc_accountmodel.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="deps\logger\src\logger.cpp">
@@ -231,7 +231,7 @@
     <ClCompile Include="deps\CoinQ\src\CoinQ_coinparams.cpp">
       <Filter>CoinQ</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_keychainmodel.cpp">
+    <ClCompile Include="src\moc_keychainmodel.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="src\txmodel.cpp">
@@ -240,16 +240,16 @@
     <ClCompile Include="src\setpassphrasedialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_signaturedialog.cpp">
+    <ClCompile Include="src\moc_signaturedialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="src\accountview.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_mainwindow.cpp">
+    <ClCompile Include="src\moc_mainwindow.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_currencyunitdialog.cpp">
+    <ClCompile Include="src\moc_currencyunitdialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="foreign\odb\result.cxx">
@@ -258,13 +258,13 @@
     <ClCompile Include="deps\CoinCore\src\hashfunc\groestl.c">
       <Filter>CoinCore\hashfunc</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_txmodel.cpp">
+    <ClCompile Include="src\moc_txmodel.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="src\signaturedialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_requestpaymentdialog.cpp">
+    <ClCompile Include="src\moc_requestpaymentdialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="src\keychainbackupdialog.cpp">
@@ -279,7 +279,7 @@
     <ClCompile Include="src\createtxdialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_accountview.cpp">
+    <ClCompile Include="src\moc_accountview.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="foreign\odb\sqlite\connection.cxx">
@@ -297,7 +297,7 @@
     <ClCompile Include="foreign\odb\details\win32\condition.cxx">
       <Filter>odb\details\win32</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_createtxdialog.cpp">
+    <ClCompile Include="src\moc_createtxdialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="src\unspenttxoutview.cpp">
@@ -306,16 +306,16 @@
     <ClCompile Include="src\scriptmodel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_setpassphrasedialog.cpp">
+    <ClCompile Include="src\moc_setpassphrasedialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_viewbip39dialog.cpp">
+    <ClCompile Include="src\moc_viewbip39dialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_txactions.cpp">
+    <ClCompile Include="src\moc_txactions.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_quicknewaccountdialog.cpp">
+    <ClCompile Include="src\moc_quicknewaccountdialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="src\docdir.cpp">
@@ -324,7 +324,7 @@
     <ClCompile Include="src\networksettingsdialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_keychainview.cpp">
+    <ClCompile Include="src\moc_keychainview.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="foreign\odb\sqlite\error.cxx">
@@ -339,10 +339,10 @@
     <ClCompile Include="src\numberformats.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_keychainbackupdialog.cpp">
+    <ClCompile Include="src\moc_keychainbackupdialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_txview.cpp">
+    <ClCompile Include="src\moc_txview.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="src\aboutdialog.cpp">
@@ -354,16 +354,16 @@
     <ClCompile Include="src\importbip32dialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_rawtxdialog.cpp">
+    <ClCompile Include="src\moc_rawtxdialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_scriptview.cpp">
+    <ClCompile Include="src\moc_scriptview.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="src\scriptview.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_unspenttxoutmodel.cpp">
+    <ClCompile Include="src\moc_unspenttxoutmodel.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="src\entropysource.cpp">
@@ -384,7 +384,7 @@
     <ClCompile Include="foreign\odb\sqlite\simple-object-statements.cxx">
       <Filter>odb-sqlite</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_aboutdialog.cpp">
+    <ClCompile Include="src\moc_aboutdialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="src\settings.cpp">
@@ -396,7 +396,7 @@
     <ClCompile Include="src\currencyvalidator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_importbip32dialog.cpp">
+    <ClCompile Include="src\moc_importbip32dialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="src\paymentrequest.cpp">
@@ -408,25 +408,25 @@
     <ClCompile Include="src\newaccountdialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_networksettingsdialog.cpp">
+    <ClCompile Include="src\moc_networksettingsdialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_newkeychaindialog.cpp">
+    <ClCompile Include="src\moc_newkeychaindialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_passphrasedialog.cpp">
+    <ClCompile Include="src\moc_passphrasedialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_scriptdialog.cpp">
+    <ClCompile Include="src\moc_scriptdialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_signatureview.cpp">
+    <ClCompile Include="src\moc_signatureview.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_txsearchdialog.cpp">
+    <ClCompile Include="src\moc_txsearchdialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_unspenttxoutview.cpp">
+    <ClCompile Include="src\moc_unspenttxoutview.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="deps\CoinCore\src\bip39.cpp">
@@ -438,22 +438,22 @@
     <ClCompile Include="src\txsearchdialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_signatureactions.cpp">
+    <ClCompile Include="src\moc_signatureactions.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="src\signaturemodel.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_scriptmodel.cpp">
+    <ClCompile Include="src\moc_scriptmodel.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="src\signatureactions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_signaturemodel.cpp">
+    <ClCompile Include="src\moc_signaturemodel.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_newaccountdialog.cpp">
+    <ClCompile Include="src\moc_newaccountdialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="src\commandserver.cpp">
@@ -480,7 +480,7 @@
     <ClCompile Include="src\hexvalidator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_splashscreen.cpp">
+    <ClCompile Include="src\moc_splashscreen.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="src\importbip39dialog.cpp">
@@ -495,10 +495,10 @@
     <ClCompile Include="src\networkselectiondialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_currencyvalidator.cpp">
+    <ClCompile Include="src\moc_currencyvalidator.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_commandserver.cpp">
+    <ClCompile Include="src\moc_commandserver.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="deps\qrencode-3.4.3\rscode.c">
@@ -507,25 +507,25 @@
     <ClCompile Include="deps\qrencode-3.4.3\mask.c">
       <Filter>qrencode</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_viewbip32dialog.cpp">
+    <ClCompile Include="src\moc_viewbip32dialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_networkselectiondialog.cpp">
+    <ClCompile Include="src\moc_networkselectiondialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_hexvalidator.cpp">
+    <ClCompile Include="src\moc_hexvalidator.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="src\entropydialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_acceptlicensedialog.cpp">
+    <ClCompile Include="src\moc_acceptlicensedialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_entropydialog.cpp">
+    <ClCompile Include="src\moc_entropydialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_importbip39dialog.cpp">
+    <ClCompile Include="src\moc_importbip39dialog.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="src\filesystem.cpp">
@@ -537,13 +537,13 @@
     <ClCompile Include="src\keychainbackupwizard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_keychainbackupwizard.cpp">
+    <ClCompile Include="src\moc_keychainbackupwizard.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
     <ClCompile Include="src\wordlistvalidator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\moc\moc_wordlistvalidator.cpp">
+    <ClCompile Include="src\moc_wordlistvalidator.cpp">
       <Filter>Source Files\moc</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,0 +1,52 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"  ToolsVersion="4.0" DefaultTarget="Moc">
+<ItemGroup>
+	<Moc Include="aboutdialog.h" 			/>
+	<Moc Include="acceptlicensedialog.h" 	/>
+	<Moc Include="accountmodel.h" 			/>
+	<Moc Include="accountview.h" 			/>
+	<Moc Include="commandserver.h" 			/>
+	<Moc Include="createtxdialog.h" 		/>
+	<Moc Include="currencyunitdialog.h" 	/>
+	<Moc Include="currencyvalidator.h" 		/>
+	<Moc Include="entropydialog.h" 			/>
+	<Moc Include="hexvalidator.h" 			/>
+	<Moc Include="importbip32dialog.h" 		/>
+	<Moc Include="importbip39dialog.h" 		/>
+	<Moc Include="keychainbackupdialog.h" 	/>
+	<Moc Include="keychainbackupwizard.h" 	/>
+	<Moc Include="keychainmodel.h" 			/>
+	<Moc Include="keychainview.h" 			/>
+	<Moc Include="mainwindow.h" 			/>
+	<Moc Include="networkselectiondialog.h" />
+	<Moc Include="networksettingsdialog.h" 	/>
+	<Moc Include="newaccountdialog.h" 		/>
+	<Moc Include="newkeychaindialog.h" 		/>
+	<Moc Include="passphrasedialog.h" 		/>
+	<Moc Include="quicknewaccountdialog.h" 	/>
+	<Moc Include="rawtxdialog.h" 			/>
+	<Moc Include="requestpaymentdialog.h" 	/>
+	<Moc Include="scriptdialog.h" 			/>
+	<Moc Include="scriptmodel.h" 			/>
+	<Moc Include="scriptview.h" 			/>
+	<Moc Include="setpassphrasedialog.h" 	/>
+	<Moc Include="signatureactions.h" 		/>
+	<Moc Include="signaturedialog.h" 		/>
+	<Moc Include="signaturemodel.h" 		/>
+	<Moc Include="signatureview.h" 			/>
+	<Moc Include="splashscreen.h" 			/>
+	<Moc Include="txactions.h" 				/>
+	<Moc Include="txmodel.h" 				/>
+	<Moc Include="txsearchdialog.h" 		/>
+	<Moc Include="txview.h" 				/>
+	<Moc Include="unspenttxoutmodel.h" 		/>
+	<Moc Include="unspenttxoutview.h" 		/>
+	<Moc Include="viewbip32dialog.h" 		/>
+	<Moc Include="viewbip39dialog.h" 		/>
+	<Moc Include="wordlistvalidator.h" 		/>
+</ItemGroup>
+
+<Target Name="Moc">
+	<Exec Command="moc.exe -o  %(Moc.RootDir)%(Moc.Directory)\moc_%(Moc.Filename).cpp  %(Moc.FullPath)" /> 
+</Target>
+</Project>
+

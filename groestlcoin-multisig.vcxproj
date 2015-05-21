@@ -89,6 +89,7 @@
       <ObjectFileName>$(IntDir)\%(RelativeDir)\</ObjectFileName>
       <ControlFlowGuard>false</ControlFlowGuard>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>-Zm500 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -111,6 +112,7 @@
       <ObjectFileName>$(IntDir)\%(RelativeDir)\</ObjectFileName>
       <ControlFlowGuard>false</ControlFlowGuard>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>-Zm500 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -133,6 +135,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <ObjectFileName>$(IntDir)\%(RelativeDir)\</ObjectFileName>
       <ControlFlowGuard>false</ControlFlowGuard>
+      <AdditionalOptions>-Zm500 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -157,6 +160,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <ObjectFileName>$(IntDir)\%(RelativeDir)\</ObjectFileName>
       <ControlFlowGuard>false</ControlFlowGuard>
+      <AdditionalOptions>-Zm500 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -341,49 +345,49 @@
     <ClCompile Include="src\keychainview.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\mainwindow.cpp" />
-    <ClCompile Include="src\moc\moc_aboutdialog.cpp" />
-    <ClCompile Include="src\moc\moc_acceptlicensedialog.cpp" />
-    <ClCompile Include="src\moc\moc_accountmodel.cpp" />
-    <ClCompile Include="src\moc\moc_accountview.cpp" />
-    <ClCompile Include="src\moc\moc_commandserver.cpp" />
-    <ClCompile Include="src\moc\moc_createtxdialog.cpp" />
-    <ClCompile Include="src\moc\moc_currencyunitdialog.cpp" />
-    <ClCompile Include="src\moc\moc_currencyvalidator.cpp" />
-    <ClCompile Include="src\moc\moc_entropydialog.cpp" />
-    <ClCompile Include="src\moc\moc_hexvalidator.cpp" />
-    <ClCompile Include="src\moc\moc_importbip32dialog.cpp" />
-    <ClCompile Include="src\moc\moc_importbip39dialog.cpp" />
-    <ClCompile Include="src\moc\moc_keychainbackupdialog.cpp" />
-    <ClCompile Include="src\moc\moc_keychainbackupwizard.cpp" />
-    <ClCompile Include="src\moc\moc_keychainmodel.cpp" />
-    <ClCompile Include="src\moc\moc_keychainview.cpp" />
-    <ClCompile Include="src\moc\moc_mainwindow.cpp" />
-    <ClCompile Include="src\moc\moc_networkselectiondialog.cpp" />
-    <ClCompile Include="src\moc\moc_networksettingsdialog.cpp" />
-    <ClCompile Include="src\moc\moc_newaccountdialog.cpp" />
-    <ClCompile Include="src\moc\moc_newkeychaindialog.cpp" />
-    <ClCompile Include="src\moc\moc_passphrasedialog.cpp" />
-    <ClCompile Include="src\moc\moc_quicknewaccountdialog.cpp" />
-    <ClCompile Include="src\moc\moc_rawtxdialog.cpp" />
-    <ClCompile Include="src\moc\moc_requestpaymentdialog.cpp" />
-    <ClCompile Include="src\moc\moc_scriptdialog.cpp" />
-    <ClCompile Include="src\moc\moc_scriptmodel.cpp" />
-    <ClCompile Include="src\moc\moc_scriptview.cpp" />
-    <ClCompile Include="src\moc\moc_setpassphrasedialog.cpp" />
-    <ClCompile Include="src\moc\moc_signatureactions.cpp" />
-    <ClCompile Include="src\moc\moc_signaturedialog.cpp" />
-    <ClCompile Include="src\moc\moc_signaturemodel.cpp" />
-    <ClCompile Include="src\moc\moc_signatureview.cpp" />
-    <ClCompile Include="src\moc\moc_splashscreen.cpp" />
-    <ClCompile Include="src\moc\moc_txactions.cpp" />
-    <ClCompile Include="src\moc\moc_txmodel.cpp" />
-    <ClCompile Include="src\moc\moc_txsearchdialog.cpp" />
-    <ClCompile Include="src\moc\moc_txview.cpp" />
-    <ClCompile Include="src\moc\moc_unspenttxoutmodel.cpp" />
-    <ClCompile Include="src\moc\moc_unspenttxoutview.cpp" />
-    <ClCompile Include="src\moc\moc_viewbip32dialog.cpp" />
-    <ClCompile Include="src\moc\moc_viewbip39dialog.cpp" />
-    <ClCompile Include="src\moc\moc_wordlistvalidator.cpp" />
+    <ClCompile Include="src\moc_aboutdialog.cpp" />
+    <ClCompile Include="src\moc_acceptlicensedialog.cpp" />
+    <ClCompile Include="src\moc_accountmodel.cpp" />
+    <ClCompile Include="src\moc_accountview.cpp" />
+    <ClCompile Include="src\moc_commandserver.cpp" />
+    <ClCompile Include="src\moc_createtxdialog.cpp" />
+    <ClCompile Include="src\moc_currencyunitdialog.cpp" />
+    <ClCompile Include="src\moc_currencyvalidator.cpp" />
+    <ClCompile Include="src\moc_entropydialog.cpp" />
+    <ClCompile Include="src\moc_hexvalidator.cpp" />
+    <ClCompile Include="src\moc_importbip32dialog.cpp" />
+    <ClCompile Include="src\moc_importbip39dialog.cpp" />
+    <ClCompile Include="src\moc_keychainbackupdialog.cpp" />
+    <ClCompile Include="src\moc_keychainbackupwizard.cpp" />
+    <ClCompile Include="src\moc_keychainmodel.cpp" />
+    <ClCompile Include="src\moc_keychainview.cpp" />
+    <ClCompile Include="src\moc_mainwindow.cpp" />
+    <ClCompile Include="src\moc_networkselectiondialog.cpp" />
+    <ClCompile Include="src\moc_networksettingsdialog.cpp" />
+    <ClCompile Include="src\moc_newaccountdialog.cpp" />
+    <ClCompile Include="src\moc_newkeychaindialog.cpp" />
+    <ClCompile Include="src\moc_passphrasedialog.cpp" />
+    <ClCompile Include="src\moc_quicknewaccountdialog.cpp" />
+    <ClCompile Include="src\moc_rawtxdialog.cpp" />
+    <ClCompile Include="src\moc_requestpaymentdialog.cpp" />
+    <ClCompile Include="src\moc_scriptdialog.cpp" />
+    <ClCompile Include="src\moc_scriptmodel.cpp" />
+    <ClCompile Include="src\moc_scriptview.cpp" />
+    <ClCompile Include="src\moc_setpassphrasedialog.cpp" />
+    <ClCompile Include="src\moc_signatureactions.cpp" />
+    <ClCompile Include="src\moc_signaturedialog.cpp" />
+    <ClCompile Include="src\moc_signaturemodel.cpp" />
+    <ClCompile Include="src\moc_signatureview.cpp" />
+    <ClCompile Include="src\moc_splashscreen.cpp" />
+    <ClCompile Include="src\moc_txactions.cpp" />
+    <ClCompile Include="src\moc_txmodel.cpp" />
+    <ClCompile Include="src\moc_txsearchdialog.cpp" />
+    <ClCompile Include="src\moc_txview.cpp" />
+    <ClCompile Include="src\moc_unspenttxoutmodel.cpp" />
+    <ClCompile Include="src\moc_unspenttxoutview.cpp" />
+    <ClCompile Include="src\moc_viewbip32dialog.cpp" />
+    <ClCompile Include="src\moc_viewbip39dialog.cpp" />
+    <ClCompile Include="src\moc_wordlistvalidator.cpp" />
     <ClCompile Include="src\networkselectiondialog.cpp" />
     <ClCompile Include="src\networksettingsdialog.cpp" />
     <ClCompile Include="src\networksync.cpp">
