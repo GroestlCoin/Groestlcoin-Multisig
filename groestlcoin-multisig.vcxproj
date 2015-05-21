@@ -431,11 +431,15 @@
     <ClInclude Include="deps\CoinCore\src\hash.h" />
     <ClInclude Include="inc\multisig-config.h" />
     <ClInclude Include="inc\stdafx.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <MASM Include="src\el\bignum\x86x64\bignum-x86x64.asm">
       <FileType>Document</FileType>
     </MASM>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="misc\groestlcoin-multisig.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

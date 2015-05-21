@@ -33,7 +33,7 @@ SplashScreen::SplashScreen()
 
     painter.setPen(QPen(TEXTCOLOR));
 
-    QString fullVersionText = "(" + getShortCommitHash() + ") ";
+	QString fullVersionText = ""; //!!!P "(" + getShortCommitHash() + ") ";
     fullVersionText += getVersionText();
 
     painter.drawText(

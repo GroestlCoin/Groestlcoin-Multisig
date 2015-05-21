@@ -43,7 +43,7 @@ AboutDialog::AboutDialog(QWidget* parent)
     QFormLayout* formLayout = new QFormLayout();
     formLayout->addRow(tr("Version:"), versionLabel);
     formLayout->addRow(tr("Schema:"), schemaLabel);
-    formLayout->addRow(tr("Commit:"), commitLabel);
+//!!!    formLayout->addRow(tr("Commit:"), commitLabel);
     formLayout->addRow(tr("OpenSSL:"), openSSLLabel);
 
     QVBoxLayout* mainLayout = new QVBoxLayout();
