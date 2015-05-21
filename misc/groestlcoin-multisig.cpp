@@ -2,25 +2,6 @@
 #include <CoinQ_coinparams.h>
 
 
-uchar_vector groestlcoin_hash(const uchar_vector& data) {
-	unsigned char hash[64];
-	{
-		sph_groestl512_context ctx;
-		sph_groestl512_init(&ctx);
-		sph_groestl512(&ctx, &data[0], data.size());
-		sph_groestl512_close(&ctx, hash);
-	}
-	sph_groestl512_context ctx;
-	sph_groestl512_init(&ctx);
-	sph_groestl512(&ctx, hash, 64);
-	sph_groestl512_close(&ctx, hash);
-	return uchar_vector(hash, 32);
-}
-
-PFN_MessageHash
-	g_hookMessageHash = &groestlcoin_hash,
-	g_hookAddressHash = &groestlcoin_hash,
-	g_hookTxHash = &sha256;
 
 #pragma comment(lib, "openssl")
 #pragma comment(lib, "sqlite3")

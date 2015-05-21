@@ -9,7 +9,7 @@
 // All Rights Reserved.
 
 #include "versioninfo.h"
-#include "../BuildInfo.h"
+//#include "../BuildInfo.h"
 
 #include <CoinDB/Schema.h>
 
@@ -18,8 +18,8 @@
 // Definitions
 const QString VERSIONTEXT("0.9.4 beta");
 
-const QString commitHash(COMMIT_HASH);
-const QString shortCommitHash(QString(COMMIT_HASH).left(7));
+const QString commitHash; //(COMMIT_HASH);
+const QString shortCommitHash; //(QString(COMMIT_HASH).left(7));
 
 const uint32_t schemaVersion(SCHEMA_VERSION);
 const QString schemaVersionText(QString::number(SCHEMA_VERSION));
