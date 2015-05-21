@@ -619,7 +619,7 @@ void NetworkSync::start(const std::string& host, const std::string& port)
         m_bStarted = true;
 
         std::string port_ = port.empty() ? m_coinParams.default_port() : port;
-        m_peer.set(host, port_, m_coinParams.magic_bytes(), m_coinParams.protocol_version(), "Wallet v0.1", 0, false);
+        m_peer.set(host, port_, m_coinParams.magic_bytes(), m_coinParams.protocol_version(), GRS_CFG_USER_AGENT, 0, false);
 
         LOGGER(trace) << "Starting peer " << host << ":" << port_ << "..." << endl;
         m_peer.start();

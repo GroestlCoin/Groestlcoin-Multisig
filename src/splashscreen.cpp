@@ -15,7 +15,8 @@
 #include <QPainter>
 
 const QString SPLASHSCREENFILENAME(":/images/splash.png");
-const QColor TEXTCOLOR(225, 225, 225);
+//!!!P const QColor TEXTCOLOR(225, 225, 225);
+const QColor TEXTCOLOR(0, 0, 0);
 
 const int VERSIONPADDINGRIGHT = 20;
 const int VERSIONPADDINGBOTTOM = 50;

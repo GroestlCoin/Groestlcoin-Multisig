@@ -89,7 +89,6 @@
       <ObjectFileName>$(IntDir)\%(RelativeDir)\</ObjectFileName>
       <ControlFlowGuard>false</ControlFlowGuard>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions>-Zm500 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -112,7 +111,6 @@
       <ObjectFileName>$(IntDir)\%(RelativeDir)\</ObjectFileName>
       <ControlFlowGuard>false</ControlFlowGuard>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions>-Zm500 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -135,7 +133,6 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <ObjectFileName>$(IntDir)\%(RelativeDir)\</ObjectFileName>
       <ControlFlowGuard>false</ControlFlowGuard>
-      <AdditionalOptions>-Zm500 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -160,7 +157,6 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <ObjectFileName>$(IntDir)\%(RelativeDir)\</ObjectFileName>
       <ControlFlowGuard>false</ControlFlowGuard>
-      <AdditionalOptions>-Zm500 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -312,7 +308,7 @@
     <ClCompile Include="foreign\odb\sqlite\query.cxx" />
     <ClCompile Include="foreign\odb\sqlite\statement.cxx" />
     <ClCompile Include="foreign\odb\transaction.cxx" />
-    <ClCompile Include="res\res_coinvault.cpp">
+    <ClCompile Include="src\res_coinvault.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='R_St|Win32'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='D_St|x64'">NotUsing</PrecompiledHeader>

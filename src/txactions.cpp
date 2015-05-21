@@ -496,7 +496,11 @@ void TxActions::insertRawTxFromFile()
 
 void TxActions::viewTxOnWeb()
 {
+#if GRS_CFG_GROESTLCOIN	
+	const QString URL_PREFIX("https://chainz.cryptoid.info/grs/tx.dws?");
+#else
     const QString URL_PREFIX("https://blockchain.info/tx/");
+#endif
 
     try {
         std::shared_ptr<CoinDB::Tx> tx = m_txModel->getTx(currentRow);
@@ -595,7 +599,11 @@ void TxActions::createActions()
     insertRawTxFromFileAction->setEnabled(false);
     connect(insertRawTxFromFileAction, SIGNAL(triggered()), this, SLOT(insertRawTxFromFile()));
 
+#if GRS_CFG_GROESTLCOIN
+	viewTxOnWebAction = new QAction(tr("View At cryptoid.info"), this);
+#else
     viewTxOnWebAction = new QAction(tr("View At Blockchain.info"), this);
+#endif
     viewTxOnWebAction->setEnabled(false);
     connect(viewTxOnWebAction, SIGNAL(triggered()), this, SLOT(viewTxOnWeb()));
 

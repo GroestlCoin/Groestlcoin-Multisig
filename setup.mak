@@ -1,6 +1,6 @@
 #	Build MSI packages
 
-WIX_LINK = light.exe -ext WixUIExtension -ext WixUtilExtension -dWixUILicenseRtf=docs\eula.txt
+WIX_LINK = light.exe -ext WixUIExtension -ext WixUtilExtension -dWixUILicenseRtf=docs\eula.rtf
 
 msi : groestlcoin-multisig_x86.msi groestlcoin-multisig_x64.msi
 

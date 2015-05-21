@@ -122,9 +122,15 @@ private:
 
 // Individual accessors
 const CoinParams& getBitcoinParams();
+/*!!!
 const CoinParams& getTestnet3Params();
 const CoinParams& getLitecoinParams();
 const CoinParams& getQuarkcoinParams();
+*/
+
 const CoinParams& getGroestlcoinParams();
+#define GRS_CFG_USER_AGENT "/GroestlCoin-Multisig:0.9.4/"
+
+
 
 }

@@ -43,10 +43,14 @@
 	<Moc Include="viewbip32dialog.h" 		/>
 	<Moc Include="viewbip39dialog.h" 		/>
 	<Moc Include="wordlistvalidator.h" 		/>
+
+	<Qrc Include="../res/coinvault.qrc"		/>
+		
 </ItemGroup>
 
 <Target Name="Moc">
 	<Exec Command="moc.exe -o  %(Moc.RootDir)%(Moc.Directory)\moc_%(Moc.Filename).cpp  %(Moc.FullPath)" /> 
+	<Exec Command="rcc.exe --name %(Qrc.Filename) -o res_%(Qrc.Filename).cpp  %(Qrc.FullPath)" /> 
 </Target>
 </Project>
 

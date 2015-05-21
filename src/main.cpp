@@ -165,6 +165,7 @@ int main(int argc, char* argv[])
     mainWin.show();
     splash.finish(&mainWin);
 
+/*!!!P
     if (!mainWin.isLicenseAccepted()) {
         //Display license agreement
         AcceptLicenseDialog acceptLicenseDialog;
@@ -176,6 +177,7 @@ int main(int argc, char* argv[])
         mainWin.setLicenseAccepted(true);
         mainWin.saveSettings();
     }
+*/
 
     commandServer.uiReady();
 

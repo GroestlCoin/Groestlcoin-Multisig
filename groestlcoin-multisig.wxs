@@ -7,7 +7,7 @@
 <?if $(sys.BUILDARCH) = x64 ?>
 	<?define OUTDIR="x64_R_St\"?>
 <?else ?>
-	<?define PRODVER="x86_R_St\"?>
+	<?define OUTDIR="x86_R_St\"?>
 <?endif ?>
 
 <Product Name='GroestlCoin-Multisig' Id='*' UpgradeCode='$(var.UpgradeCode)' Version='$(var.PRODVER)' Manufacturer='GroestlCoin' Language='1033' >
@@ -21,7 +21,7 @@
 		<UpgradeVersion OnlyDetect="no" Maximum="99.0.0.0" Property="OLDERVERSIONBEINGUPGRADED" IncludeMaximum="no" />
 	</Upgrade>
 
-    <Icon Id="Groestlcoin.ico" SourceFile="ui\images\groestlcoin.ico" />
+    <Icon Id="Groestlcoin.ico" SourceFile="res\icons\app_icons\groestlcoin.ico" />
 
 	<Property Id="ARPPRODUCTICON" Value="Groestlcoin.ico" />
    	<Property Id='DiskPrompt' Value="GroestlCoin-Multisig" />
@@ -47,15 +47,14 @@
    			<Directory Id='INSTALLDIR' Name='GroestlCoin-Multisig' />
 		</Directory>
 <?endif ?>
-
   		<Directory Id="ProgramMenuFolder" Name="Programs" />
    		<Directory Id="DesktopFolder" Name="Desktop" />
 	</Directory>
 
-	<Media Id="1" Cabinet="grkmultisig.cab" EmbedCab="yes"/>
+	<Media Id="1" Cabinet="grsmultisig.cab" EmbedCab="yes"/>
 
 	<Component Id='CMP_GroestlcoinMultisig' Guid='9a17d560-4a28-4121-a4d0-bade7879dc73' Directory='INSTALLDIR' >
-		<File Id="GroestlCoin_Multisig.exe" Source="$(v.OUTDIR)\Groestlcoin-Multisig.exe"	KeyPath='yes' 		>
+		<File Id="GroestlCoin_Multisig.exe" Source="$(var.OUTDIR)\Groestlcoin-Multisig.exe"	KeyPath='yes' 		>
 			<Shortcut Id="startmenuGroestlCoinn" 	Directory="ProgramMenuFolder" 	Name="GroestlCoin-Multisig" Icon="Groestlcoin.ico" IconIndex="0" Advertise="yes" />
 			<Shortcut Id="desktopGroestlCoin" 		Directory="DesktopFolder"  		Name="GroestlCoin-Multisig" Icon="Groestlcoin.ico" IconIndex="0" Advertise="yes" />
 		</File>
@@ -65,20 +64,13 @@
  	<CustomAction Id="NewerVersionDetected" Error="There is a later version of this product installed"/>
 	<CustomAction Id="SetARPINSTALLLOCATION" Property="ARPINSTALLLOCATION" Value="[INSTALLDIR]" /> 
 	<CustomAction Id='LaunchFile' FileKey='GroestlCoin_Multisig.exe' ExeCommand='' Return="asyncNoWait" />
-
 	
 	<InstallUISequence>
     	<AppSearch After="FindRelatedProducts"/> 
 	</InstallUISequence>
 
 
-	<Property Id="WixShellExecTarget" Value="http://www.microsoft.com/download/en/details.aspx?id=17718" />
-	<CustomAction Id="OpenNetfxUrl" BinaryKey="WixCA" DllEntry="WixShellExec"/>
-
 	<InstallExecuteSequence>
-		<Custom Action="OpenNetfxUrl" Before="InstallInitialize"><![CDATA[(NOT (NETFRAMEWORK35 OR NETFRAMEWORK40CLIENT))]]></Custom>
-		<Custom Action="NetfxAbortError" After="InstallInitialize"><![CDATA[(NOT (NETFRAMEWORK35 OR NETFRAMEWORK40CLIENT))]]></Custom>
-
 		<Custom Action="NewerVersionDetected" After="FindRelatedProducts">NEWERVERSIONDETECTED</Custom>
 		<RemoveExistingProducts After="InstallInitialize" />  
 		<InstallFiles/>
@@ -91,7 +83,7 @@
 	<Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" /> 
 
    	<Feature Id='Complete' Level='1' Title='GroestlCoin-Multisig'>
-   		<ComponentRef Id='CMP_Groestlcoin' />
+   		<ComponentRef Id='CMP_GroestlcoinMultisig' />
    	</Feature>
 
 </Product>
