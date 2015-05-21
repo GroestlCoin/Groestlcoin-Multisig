@@ -534,6 +534,18 @@
     <ClCompile Include="res\res_coinvault.cpp">
       <Filter>Source Files\res</Filter>
     </ClCompile>
+    <ClCompile Include="src\keychainbackupwizard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_keychainbackupwizard.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\wordlistvalidator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\moc\moc_wordlistvalidator.cpp">
+      <Filter>Source Files\moc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="inc\multisig-config.h">

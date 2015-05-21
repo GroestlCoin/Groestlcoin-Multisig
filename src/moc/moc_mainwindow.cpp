@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[122];
-    char stringdata[1711];
+    QByteArrayData data[123];
+    char stringdata[1728];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -92,65 +92,66 @@ QT_MOC_LITERAL(59, 834, 14), // "unlockKeychain"
 QT_MOC_LITERAL(60, 849, 12), // "lockKeychain"
 QT_MOC_LITERAL(61, 862, 16), // "lockAllKeychains"
 QT_MOC_LITERAL(62, 879, 21), // "setKeychainPassphrase"
-QT_MOC_LITERAL(63, 901, 14), // "importKeychain"
-QT_MOC_LITERAL(64, 916, 14), // "exportKeychain"
-QT_MOC_LITERAL(65, 931, 13), // "exportPrivate"
-QT_MOC_LITERAL(66, 945, 11), // "importBIP32"
-QT_MOC_LITERAL(67, 957, 9), // "viewBIP32"
-QT_MOC_LITERAL(68, 967, 11), // "viewPrivate"
-QT_MOC_LITERAL(69, 979, 11), // "importBIP39"
-QT_MOC_LITERAL(70, 991, 9), // "viewBIP39"
-QT_MOC_LITERAL(71, 1001, 14), // "backupKeychain"
-QT_MOC_LITERAL(72, 1016, 21), // "updateCurrentKeychain"
-QT_MOC_LITERAL(73, 1038, 7), // "current"
-QT_MOC_LITERAL(74, 1046, 8), // "previous"
-QT_MOC_LITERAL(75, 1055, 23), // "updateSelectedKeychains"
-QT_MOC_LITERAL(76, 1079, 14), // "QItemSelection"
-QT_MOC_LITERAL(77, 1094, 8), // "selected"
-QT_MOC_LITERAL(78, 1103, 10), // "deselected"
-QT_MOC_LITERAL(79, 1114, 15), // "quickNewAccount"
-QT_MOC_LITERAL(80, 1130, 10), // "newAccount"
-QT_MOC_LITERAL(81, 1141, 13), // "importAccount"
-QT_MOC_LITERAL(82, 1155, 13), // "exportAccount"
-QT_MOC_LITERAL(83, 1169, 19), // "exportSharedAccount"
-QT_MOC_LITERAL(84, 1189, 13), // "deleteAccount"
-QT_MOC_LITERAL(85, 1203, 18), // "viewAccountHistory"
-QT_MOC_LITERAL(86, 1222, 11), // "viewScripts"
-QT_MOC_LITERAL(87, 1234, 14), // "requestPayment"
-QT_MOC_LITERAL(88, 1249, 15), // "viewUnsignedTxs"
-QT_MOC_LITERAL(89, 1265, 20), // "updateCurrentAccount"
-QT_MOC_LITERAL(90, 1286, 22), // "updateSelectedAccounts"
-QT_MOC_LITERAL(91, 1309, 15), // "refreshAccounts"
-QT_MOC_LITERAL(92, 1325, 11), // "insertRawTx"
-QT_MOC_LITERAL(93, 1337, 11), // "createRawTx"
-QT_MOC_LITERAL(94, 1349, 8), // "createTx"
-QT_MOC_LITERAL(95, 1358, 14), // "PaymentRequest"
-QT_MOC_LITERAL(96, 1373, 14), // "paymentRequest"
-QT_MOC_LITERAL(97, 1388, 9), // "signRawTx"
-QT_MOC_LITERAL(98, 1398, 5), // "newTx"
-QT_MOC_LITERAL(99, 1404, 9), // "sendRawTx"
-QT_MOC_LITERAL(100, 1414, 10), // "syncBlocks"
-QT_MOC_LITERAL(101, 1425, 15), // "fetchingHeaders"
-QT_MOC_LITERAL(102, 1441, 14), // "headersSynched"
-QT_MOC_LITERAL(103, 1456, 14), // "fetchingBlocks"
-QT_MOC_LITERAL(104, 1471, 13), // "blocksSynched"
-QT_MOC_LITERAL(105, 1485, 12), // "addBestChain"
-QT_MOC_LITERAL(106, 1498, 15), // "removeBestChain"
-QT_MOC_LITERAL(107, 1514, 8), // "newBlock"
-QT_MOC_LITERAL(108, 1523, 16), // "startNetworkSync"
-QT_MOC_LITERAL(109, 1540, 15), // "stopNetworkSync"
-QT_MOC_LITERAL(110, 1556, 10), // "promptSync"
-QT_MOC_LITERAL(111, 1567, 14), // "connectionOpen"
-QT_MOC_LITERAL(112, 1582, 16), // "connectionClosed"
-QT_MOC_LITERAL(113, 1599, 13), // "networkStatus"
-QT_MOC_LITERAL(114, 1613, 12), // "networkError"
-QT_MOC_LITERAL(115, 1626, 5), // "error"
-QT_MOC_LITERAL(116, 1632, 14), // "networkStarted"
-QT_MOC_LITERAL(117, 1647, 14), // "networkStopped"
-QT_MOC_LITERAL(118, 1662, 14), // "networkTimeout"
-QT_MOC_LITERAL(119, 1677, 15), // "networkSettings"
-QT_MOC_LITERAL(120, 1693, 5), // "about"
-QT_MOC_LITERAL(121, 1699, 11) // "errorStatus"
+QT_MOC_LITERAL(63, 901, 12), // "keychainName"
+QT_MOC_LITERAL(64, 914, 18), // "makeKeychainBackup"
+QT_MOC_LITERAL(65, 933, 14), // "importKeychain"
+QT_MOC_LITERAL(66, 948, 14), // "exportKeychain"
+QT_MOC_LITERAL(67, 963, 13), // "exportPrivate"
+QT_MOC_LITERAL(68, 977, 11), // "importBIP32"
+QT_MOC_LITERAL(69, 989, 9), // "viewBIP32"
+QT_MOC_LITERAL(70, 999, 11), // "viewPrivate"
+QT_MOC_LITERAL(71, 1011, 11), // "importBIP39"
+QT_MOC_LITERAL(72, 1023, 9), // "viewBIP39"
+QT_MOC_LITERAL(73, 1033, 21), // "updateCurrentKeychain"
+QT_MOC_LITERAL(74, 1055, 7), // "current"
+QT_MOC_LITERAL(75, 1063, 8), // "previous"
+QT_MOC_LITERAL(76, 1072, 23), // "updateSelectedKeychains"
+QT_MOC_LITERAL(77, 1096, 14), // "QItemSelection"
+QT_MOC_LITERAL(78, 1111, 8), // "selected"
+QT_MOC_LITERAL(79, 1120, 10), // "deselected"
+QT_MOC_LITERAL(80, 1131, 15), // "quickNewAccount"
+QT_MOC_LITERAL(81, 1147, 10), // "newAccount"
+QT_MOC_LITERAL(82, 1158, 13), // "importAccount"
+QT_MOC_LITERAL(83, 1172, 13), // "exportAccount"
+QT_MOC_LITERAL(84, 1186, 19), // "exportSharedAccount"
+QT_MOC_LITERAL(85, 1206, 13), // "deleteAccount"
+QT_MOC_LITERAL(86, 1220, 18), // "viewAccountHistory"
+QT_MOC_LITERAL(87, 1239, 11), // "viewScripts"
+QT_MOC_LITERAL(88, 1251, 14), // "requestPayment"
+QT_MOC_LITERAL(89, 1266, 15), // "viewUnsignedTxs"
+QT_MOC_LITERAL(90, 1282, 20), // "updateCurrentAccount"
+QT_MOC_LITERAL(91, 1303, 22), // "updateSelectedAccounts"
+QT_MOC_LITERAL(92, 1326, 15), // "refreshAccounts"
+QT_MOC_LITERAL(93, 1342, 11), // "insertRawTx"
+QT_MOC_LITERAL(94, 1354, 11), // "createRawTx"
+QT_MOC_LITERAL(95, 1366, 8), // "createTx"
+QT_MOC_LITERAL(96, 1375, 14), // "PaymentRequest"
+QT_MOC_LITERAL(97, 1390, 14), // "paymentRequest"
+QT_MOC_LITERAL(98, 1405, 9), // "signRawTx"
+QT_MOC_LITERAL(99, 1415, 5), // "newTx"
+QT_MOC_LITERAL(100, 1421, 9), // "sendRawTx"
+QT_MOC_LITERAL(101, 1431, 10), // "syncBlocks"
+QT_MOC_LITERAL(102, 1442, 15), // "fetchingHeaders"
+QT_MOC_LITERAL(103, 1458, 14), // "headersSynched"
+QT_MOC_LITERAL(104, 1473, 14), // "fetchingBlocks"
+QT_MOC_LITERAL(105, 1488, 13), // "blocksSynched"
+QT_MOC_LITERAL(106, 1502, 12), // "addBestChain"
+QT_MOC_LITERAL(107, 1515, 15), // "removeBestChain"
+QT_MOC_LITERAL(108, 1531, 8), // "newBlock"
+QT_MOC_LITERAL(109, 1540, 16), // "startNetworkSync"
+QT_MOC_LITERAL(110, 1557, 15), // "stopNetworkSync"
+QT_MOC_LITERAL(111, 1573, 10), // "promptSync"
+QT_MOC_LITERAL(112, 1584, 14), // "connectionOpen"
+QT_MOC_LITERAL(113, 1599, 16), // "connectionClosed"
+QT_MOC_LITERAL(114, 1616, 13), // "networkStatus"
+QT_MOC_LITERAL(115, 1630, 12), // "networkError"
+QT_MOC_LITERAL(116, 1643, 5), // "error"
+QT_MOC_LITERAL(117, 1649, 14), // "networkStarted"
+QT_MOC_LITERAL(118, 1664, 14), // "networkStopped"
+QT_MOC_LITERAL(119, 1679, 14), // "networkTimeout"
+QT_MOC_LITERAL(120, 1694, 15), // "networkSettings"
+QT_MOC_LITERAL(121, 1710, 5), // "about"
+QT_MOC_LITERAL(122, 1716, 11) // "errorStatus"
 
     },
     "MainWindow\0status\0\0message\0"
@@ -177,16 +178,17 @@ QT_MOC_LITERAL(121, 1699, 11) // "errorStatus"
     "exportVault\0exportPrivKeys\0closeVault\0"
     "newKeychain\0unlockKeychain\0lockKeychain\0"
     "lockAllKeychains\0setKeychainPassphrase\0"
+    "keychainName\0makeKeychainBackup\0"
     "importKeychain\0exportKeychain\0"
     "exportPrivate\0importBIP32\0viewBIP32\0"
     "viewPrivate\0importBIP39\0viewBIP39\0"
-    "backupKeychain\0updateCurrentKeychain\0"
-    "current\0previous\0updateSelectedKeychains\0"
-    "QItemSelection\0selected\0deselected\0"
-    "quickNewAccount\0newAccount\0importAccount\0"
-    "exportAccount\0exportSharedAccount\0"
-    "deleteAccount\0viewAccountHistory\0"
-    "viewScripts\0requestPayment\0viewUnsignedTxs\0"
+    "updateCurrentKeychain\0current\0previous\0"
+    "updateSelectedKeychains\0QItemSelection\0"
+    "selected\0deselected\0quickNewAccount\0"
+    "newAccount\0importAccount\0exportAccount\0"
+    "exportSharedAccount\0deleteAccount\0"
+    "viewAccountHistory\0viewScripts\0"
+    "requestPayment\0viewUnsignedTxs\0"
     "updateCurrentAccount\0updateSelectedAccounts\0"
     "refreshAccounts\0insertRawTx\0createRawTx\0"
     "createTx\0PaymentRequest\0paymentRequest\0"
@@ -208,7 +210,7 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-     102,   14, // methods
+     104,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -216,110 +218,112 @@ static const uint qt_meta_data_MainWindow[] = {
       20,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,  524,    2, 0x06 /* Public */,
-       4,    1,  527,    2, 0x06 /* Public */,
-       5,    1,  530,    2, 0x06 /* Public */,
-       7,    1,  533,    2, 0x06 /* Public */,
-       8,    1,  536,    2, 0x06 /* Public */,
-       9,    1,  539,    2, 0x06 /* Public */,
-      12,    0,  542,    2, 0x06 /* Public */,
-      13,    0,  543,    2, 0x06 /* Public */,
-      14,    0,  544,    2, 0x06 /* Public */,
-      15,    0,  545,    2, 0x06 /* Public */,
-      16,    0,  546,    2, 0x06 /* Public */,
-      17,    0,  547,    2, 0x06 /* Public */,
-      18,    0,  548,    2, 0x06 /* Public */,
-      19,    0,  549,    2, 0x06 /* Public */,
-      20,    0,  550,    2, 0x06 /* Public */,
-      21,    0,  551,    2, 0x06 /* Public */,
-      22,    1,  552,    2, 0x06 /* Public */,
-      25,    1,  555,    2, 0x06 /* Public */,
-      26,    0,  558,    2, 0x06 /* Public */,
-      27,    0,  559,    2, 0x06 /* Public */,
+       1,    1,  534,    2, 0x06 /* Public */,
+       4,    1,  537,    2, 0x06 /* Public */,
+       5,    1,  540,    2, 0x06 /* Public */,
+       7,    1,  543,    2, 0x06 /* Public */,
+       8,    1,  546,    2, 0x06 /* Public */,
+       9,    1,  549,    2, 0x06 /* Public */,
+      12,    0,  552,    2, 0x06 /* Public */,
+      13,    0,  553,    2, 0x06 /* Public */,
+      14,    0,  554,    2, 0x06 /* Public */,
+      15,    0,  555,    2, 0x06 /* Public */,
+      16,    0,  556,    2, 0x06 /* Public */,
+      17,    0,  557,    2, 0x06 /* Public */,
+      18,    0,  558,    2, 0x06 /* Public */,
+      19,    0,  559,    2, 0x06 /* Public */,
+      20,    0,  560,    2, 0x06 /* Public */,
+      21,    0,  561,    2, 0x06 /* Public */,
+      22,    1,  562,    2, 0x06 /* Public */,
+      25,    1,  565,    2, 0x06 /* Public */,
+      26,    0,  568,    2, 0x06 /* Public */,
+      27,    0,  569,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      28,    1,  560,    2, 0x0a /* Public */,
-      30,    1,  563,    2, 0x0a /* Public */,
-      32,    2,  566,    2, 0x0a /* Public */,
-      36,    1,  571,    2, 0x09 /* Protected */,
-      38,    0,  574,    2, 0x09 /* Protected */,
-      39,    1,  575,    2, 0x09 /* Protected */,
-      42,    1,  578,    2, 0x09 /* Protected */,
-      42,    0,  581,    2, 0x29 /* Protected | MethodCloned */,
-      44,    1,  582,    2, 0x09 /* Protected */,
-      46,    1,  585,    2, 0x09 /* Protected */,
-      48,    0,  588,    2, 0x08 /* Private */,
-      48,    1,  589,    2, 0x08 /* Private */,
-      50,    1,  592,    2, 0x08 /* Private */,
-      52,    1,  595,    2, 0x08 /* Private */,
-      52,    0,  598,    2, 0x28 /* Private | MethodCloned */,
-      53,    1,  599,    2, 0x08 /* Private */,
-      53,    0,  602,    2, 0x28 /* Private | MethodCloned */,
-      54,    1,  603,    2, 0x08 /* Private */,
-      54,    0,  606,    2, 0x28 /* Private | MethodCloned */,
-      55,    2,  607,    2, 0x08 /* Private */,
-      55,    1,  612,    2, 0x28 /* Private | MethodCloned */,
-      55,    0,  615,    2, 0x28 /* Private | MethodCloned */,
-      57,    0,  616,    2, 0x08 /* Private */,
-      58,    0,  617,    2, 0x08 /* Private */,
-      59,    1,  618,    2, 0x08 /* Private */,
-      59,    0,  621,    2, 0x28 /* Private | MethodCloned */,
-      60,    1,  622,    2, 0x08 /* Private */,
-      60,    0,  625,    2, 0x28 /* Private | MethodCloned */,
-      61,    0,  626,    2, 0x08 /* Private */,
-      62,    0,  627,    2, 0x08 /* Private */,
-      63,    1,  628,    2, 0x08 /* Private */,
-      63,    0,  631,    2, 0x28 /* Private | MethodCloned */,
-      64,    1,  632,    2, 0x08 /* Private */,
-      66,    0,  635,    2, 0x08 /* Private */,
-      67,    1,  636,    2, 0x08 /* Private */,
-      69,    0,  639,    2, 0x08 /* Private */,
-      70,    0,  640,    2, 0x08 /* Private */,
-      71,    0,  641,    2, 0x08 /* Private */,
-      72,    2,  642,    2, 0x08 /* Private */,
-      75,    2,  647,    2, 0x08 /* Private */,
-      79,    0,  652,    2, 0x08 /* Private */,
-      80,    0,  653,    2, 0x08 /* Private */,
-      81,    1,  654,    2, 0x08 /* Private */,
-      81,    0,  657,    2, 0x28 /* Private | MethodCloned */,
-      82,    0,  658,    2, 0x08 /* Private */,
-      83,    0,  659,    2, 0x08 /* Private */,
-      84,    0,  660,    2, 0x08 /* Private */,
-      85,    0,  661,    2, 0x08 /* Private */,
-      86,    0,  662,    2, 0x08 /* Private */,
-      87,    0,  663,    2, 0x08 /* Private */,
-      88,    0,  664,    2, 0x08 /* Private */,
-      89,    2,  665,    2, 0x08 /* Private */,
-      90,    2,  670,    2, 0x08 /* Private */,
-      91,    0,  675,    2, 0x08 /* Private */,
-      92,    0,  676,    2, 0x08 /* Private */,
-      93,    0,  677,    2, 0x08 /* Private */,
-      94,    1,  678,    2, 0x08 /* Private */,
-      94,    0,  681,    2, 0x28 /* Private | MethodCloned */,
-      97,    0,  682,    2, 0x08 /* Private */,
-      98,    0,  683,    2, 0x08 /* Private */,
-      99,    0,  684,    2, 0x08 /* Private */,
-     100,    0,  685,    2, 0x08 /* Private */,
-     101,    0,  686,    2, 0x08 /* Private */,
-     102,    0,  687,    2, 0x08 /* Private */,
-     103,    0,  688,    2, 0x08 /* Private */,
-     104,    0,  689,    2, 0x08 /* Private */,
-     105,    1,  690,    2, 0x08 /* Private */,
-     106,    1,  693,    2, 0x08 /* Private */,
-     107,    0,  696,    2, 0x08 /* Private */,
-     108,    0,  697,    2, 0x08 /* Private */,
-     109,    0,  698,    2, 0x08 /* Private */,
-     110,    0,  699,    2, 0x08 /* Private */,
-     111,    0,  700,    2, 0x08 /* Private */,
-     112,    0,  701,    2, 0x08 /* Private */,
-     113,    1,  702,    2, 0x08 /* Private */,
-     114,    1,  705,    2, 0x08 /* Private */,
-     116,    0,  708,    2, 0x08 /* Private */,
-     117,    0,  709,    2, 0x08 /* Private */,
-     118,    0,  710,    2, 0x08 /* Private */,
-     119,    0,  711,    2, 0x08 /* Private */,
-     120,    0,  712,    2, 0x08 /* Private */,
-     121,    1,  713,    2, 0x08 /* Private */,
+      28,    1,  570,    2, 0x0a /* Public */,
+      30,    1,  573,    2, 0x0a /* Public */,
+      32,    2,  576,    2, 0x0a /* Public */,
+      36,    1,  581,    2, 0x09 /* Protected */,
+      38,    0,  584,    2, 0x09 /* Protected */,
+      39,    1,  585,    2, 0x09 /* Protected */,
+      42,    1,  588,    2, 0x09 /* Protected */,
+      42,    0,  591,    2, 0x29 /* Protected | MethodCloned */,
+      44,    1,  592,    2, 0x09 /* Protected */,
+      46,    1,  595,    2, 0x09 /* Protected */,
+      48,    0,  598,    2, 0x08 /* Private */,
+      48,    1,  599,    2, 0x08 /* Private */,
+      50,    1,  602,    2, 0x08 /* Private */,
+      52,    1,  605,    2, 0x08 /* Private */,
+      52,    0,  608,    2, 0x28 /* Private | MethodCloned */,
+      53,    1,  609,    2, 0x08 /* Private */,
+      53,    0,  612,    2, 0x28 /* Private | MethodCloned */,
+      54,    1,  613,    2, 0x08 /* Private */,
+      54,    0,  616,    2, 0x28 /* Private | MethodCloned */,
+      55,    2,  617,    2, 0x08 /* Private */,
+      55,    1,  622,    2, 0x28 /* Private | MethodCloned */,
+      55,    0,  625,    2, 0x28 /* Private | MethodCloned */,
+      57,    0,  626,    2, 0x08 /* Private */,
+      58,    0,  627,    2, 0x08 /* Private */,
+      59,    1,  628,    2, 0x08 /* Private */,
+      59,    0,  631,    2, 0x28 /* Private | MethodCloned */,
+      60,    1,  632,    2, 0x08 /* Private */,
+      60,    0,  635,    2, 0x28 /* Private | MethodCloned */,
+      61,    0,  636,    2, 0x08 /* Private */,
+      62,    1,  637,    2, 0x08 /* Private */,
+      62,    0,  640,    2, 0x28 /* Private | MethodCloned */,
+      64,    1,  641,    2, 0x08 /* Private */,
+      64,    0,  644,    2, 0x28 /* Private | MethodCloned */,
+      65,    1,  645,    2, 0x08 /* Private */,
+      65,    0,  648,    2, 0x28 /* Private | MethodCloned */,
+      66,    1,  649,    2, 0x08 /* Private */,
+      68,    0,  652,    2, 0x08 /* Private */,
+      69,    1,  653,    2, 0x08 /* Private */,
+      71,    0,  656,    2, 0x08 /* Private */,
+      72,    0,  657,    2, 0x08 /* Private */,
+      73,    2,  658,    2, 0x08 /* Private */,
+      76,    2,  663,    2, 0x08 /* Private */,
+      80,    0,  668,    2, 0x08 /* Private */,
+      81,    0,  669,    2, 0x08 /* Private */,
+      82,    1,  670,    2, 0x08 /* Private */,
+      82,    0,  673,    2, 0x28 /* Private | MethodCloned */,
+      83,    0,  674,    2, 0x08 /* Private */,
+      84,    0,  675,    2, 0x08 /* Private */,
+      85,    0,  676,    2, 0x08 /* Private */,
+      86,    0,  677,    2, 0x08 /* Private */,
+      87,    0,  678,    2, 0x08 /* Private */,
+      88,    0,  679,    2, 0x08 /* Private */,
+      89,    0,  680,    2, 0x08 /* Private */,
+      90,    2,  681,    2, 0x08 /* Private */,
+      91,    2,  686,    2, 0x08 /* Private */,
+      92,    0,  691,    2, 0x08 /* Private */,
+      93,    0,  692,    2, 0x08 /* Private */,
+      94,    0,  693,    2, 0x08 /* Private */,
+      95,    1,  694,    2, 0x08 /* Private */,
+      95,    0,  697,    2, 0x28 /* Private | MethodCloned */,
+      98,    0,  698,    2, 0x08 /* Private */,
+      99,    0,  699,    2, 0x08 /* Private */,
+     100,    0,  700,    2, 0x08 /* Private */,
+     101,    0,  701,    2, 0x08 /* Private */,
+     102,    0,  702,    2, 0x08 /* Private */,
+     103,    0,  703,    2, 0x08 /* Private */,
+     104,    0,  704,    2, 0x08 /* Private */,
+     105,    0,  705,    2, 0x08 /* Private */,
+     106,    1,  706,    2, 0x08 /* Private */,
+     107,    1,  709,    2, 0x08 /* Private */,
+     108,    0,  712,    2, 0x08 /* Private */,
+     109,    0,  713,    2, 0x08 /* Private */,
+     110,    0,  714,    2, 0x08 /* Private */,
+     111,    0,  715,    2, 0x08 /* Private */,
+     112,    0,  716,    2, 0x08 /* Private */,
+     113,    0,  717,    2, 0x08 /* Private */,
+     114,    1,  718,    2, 0x08 /* Private */,
+     115,    1,  721,    2, 0x08 /* Private */,
+     117,    0,  724,    2, 0x08 /* Private */,
+     118,    0,  725,    2, 0x08 /* Private */,
+     119,    0,  726,    2, 0x08 /* Private */,
+     120,    0,  727,    2, 0x08 /* Private */,
+     121,    0,  728,    2, 0x08 /* Private */,
+     122,    1,  729,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString,    3,
@@ -373,20 +377,23 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void, QMetaType::QString,   43,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Int, QMetaType::QString,   63,
+    QMetaType::Int,
+    QMetaType::Int, QMetaType::QString,   63,
+    QMetaType::Int,
+    QMetaType::Void, QMetaType::QString,   31,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Bool,   67,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Bool,   70,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QModelIndex, QMetaType::QModelIndex,   74,   75,
+    QMetaType::Void, 0x80000000 | 77, 0x80000000 | 77,   78,   79,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::QString,   31,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Bool,   65,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::Bool,   68,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::QModelIndex, QMetaType::QModelIndex,   73,   74,
-    QMetaType::Void, 0x80000000 | 76, 0x80000000 | 76,   77,   78,
-    QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,   31,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -394,13 +401,12 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void,
-    QMetaType::Void, QMetaType::QModelIndex, QMetaType::QModelIndex,   73,   74,
-    QMetaType::Void, 0x80000000 | 76, 0x80000000 | 76,   77,   78,
-    QMetaType::Void,
+    QMetaType::Void, QMetaType::QModelIndex, QMetaType::QModelIndex,   74,   75,
+    QMetaType::Void, 0x80000000 | 77, 0x80000000 | 77,   78,   79,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 95,   96,
+    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 96,   97,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -419,7 +425,7 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::QString,    1,
-    QMetaType::Void, QMetaType::QString,  115,
+    QMetaType::Void, QMetaType::QString,  116,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -486,59 +492,65 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 46: _t->lockKeychain((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 47: _t->lockKeychain(); break;
         case 48: _t->lockAllKeychains(); break;
-        case 49: _t->setKeychainPassphrase(); break;
-        case 50: _t->importKeychain((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 51: _t->importKeychain(); break;
-        case 52: _t->exportKeychain((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 53: _t->importBIP32(); break;
-        case 54: _t->viewBIP32((*reinterpret_cast< bool(*)>(_a[1]))); break;
-        case 55: _t->importBIP39(); break;
-        case 56: _t->viewBIP39(); break;
-        case 57: _t->backupKeychain(); break;
-        case 58: _t->updateCurrentKeychain((*reinterpret_cast< const QModelIndex(*)>(_a[1])),(*reinterpret_cast< const QModelIndex(*)>(_a[2]))); break;
-        case 59: _t->updateSelectedKeychains((*reinterpret_cast< const QItemSelection(*)>(_a[1])),(*reinterpret_cast< const QItemSelection(*)>(_a[2]))); break;
-        case 60: _t->quickNewAccount(); break;
-        case 61: _t->newAccount(); break;
-        case 62: _t->importAccount((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 63: _t->importAccount(); break;
-        case 64: _t->exportAccount(); break;
-        case 65: _t->exportSharedAccount(); break;
-        case 66: _t->deleteAccount(); break;
-        case 67: _t->viewAccountHistory(); break;
-        case 68: _t->viewScripts(); break;
-        case 69: _t->requestPayment(); break;
-        case 70: _t->viewUnsignedTxs(); break;
-        case 71: _t->updateCurrentAccount((*reinterpret_cast< const QModelIndex(*)>(_a[1])),(*reinterpret_cast< const QModelIndex(*)>(_a[2]))); break;
-        case 72: _t->updateSelectedAccounts((*reinterpret_cast< const QItemSelection(*)>(_a[1])),(*reinterpret_cast< const QItemSelection(*)>(_a[2]))); break;
-        case 73: _t->refreshAccounts(); break;
-        case 74: _t->insertRawTx(); break;
-        case 75: _t->createRawTx(); break;
-        case 76: _t->createTx((*reinterpret_cast< const PaymentRequest(*)>(_a[1]))); break;
-        case 77: _t->createTx(); break;
-        case 78: _t->signRawTx(); break;
-        case 79: _t->newTx(); break;
-        case 80: _t->sendRawTx(); break;
-        case 81: _t->syncBlocks(); break;
-        case 82: _t->fetchingHeaders(); break;
-        case 83: _t->headersSynched(); break;
-        case 84: _t->fetchingBlocks(); break;
-        case 85: _t->blocksSynched(); break;
-        case 86: _t->addBestChain((*reinterpret_cast< const chain_header_t(*)>(_a[1]))); break;
-        case 87: _t->removeBestChain((*reinterpret_cast< const chain_header_t(*)>(_a[1]))); break;
-        case 88: _t->newBlock(); break;
-        case 89: _t->startNetworkSync(); break;
-        case 90: _t->stopNetworkSync(); break;
-        case 91: _t->promptSync(); break;
-        case 92: _t->connectionOpen(); break;
-        case 93: _t->connectionClosed(); break;
-        case 94: _t->networkStatus((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 95: _t->networkError((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 96: _t->networkStarted(); break;
-        case 97: _t->networkStopped(); break;
-        case 98: _t->networkTimeout(); break;
-        case 99: _t->networkSettings(); break;
-        case 100: _t->about(); break;
-        case 101: _t->errorStatus((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 49: { int _r = _t->setKeychainPassphrase((*reinterpret_cast< const QString(*)>(_a[1])));
+            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = _r; }  break;
+        case 50: { int _r = _t->setKeychainPassphrase();
+            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = _r; }  break;
+        case 51: { int _r = _t->makeKeychainBackup((*reinterpret_cast< const QString(*)>(_a[1])));
+            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = _r; }  break;
+        case 52: { int _r = _t->makeKeychainBackup();
+            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = _r; }  break;
+        case 53: _t->importKeychain((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 54: _t->importKeychain(); break;
+        case 55: _t->exportKeychain((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 56: _t->importBIP32(); break;
+        case 57: _t->viewBIP32((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 58: _t->importBIP39(); break;
+        case 59: _t->viewBIP39(); break;
+        case 60: _t->updateCurrentKeychain((*reinterpret_cast< const QModelIndex(*)>(_a[1])),(*reinterpret_cast< const QModelIndex(*)>(_a[2]))); break;
+        case 61: _t->updateSelectedKeychains((*reinterpret_cast< const QItemSelection(*)>(_a[1])),(*reinterpret_cast< const QItemSelection(*)>(_a[2]))); break;
+        case 62: _t->quickNewAccount(); break;
+        case 63: _t->newAccount(); break;
+        case 64: _t->importAccount((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 65: _t->importAccount(); break;
+        case 66: _t->exportAccount(); break;
+        case 67: _t->exportSharedAccount(); break;
+        case 68: _t->deleteAccount(); break;
+        case 69: _t->viewAccountHistory(); break;
+        case 70: _t->viewScripts(); break;
+        case 71: _t->requestPayment(); break;
+        case 72: _t->viewUnsignedTxs(); break;
+        case 73: _t->updateCurrentAccount((*reinterpret_cast< const QModelIndex(*)>(_a[1])),(*reinterpret_cast< const QModelIndex(*)>(_a[2]))); break;
+        case 74: _t->updateSelectedAccounts((*reinterpret_cast< const QItemSelection(*)>(_a[1])),(*reinterpret_cast< const QItemSelection(*)>(_a[2]))); break;
+        case 75: _t->refreshAccounts(); break;
+        case 76: _t->insertRawTx(); break;
+        case 77: _t->createRawTx(); break;
+        case 78: _t->createTx((*reinterpret_cast< const PaymentRequest(*)>(_a[1]))); break;
+        case 79: _t->createTx(); break;
+        case 80: _t->signRawTx(); break;
+        case 81: _t->newTx(); break;
+        case 82: _t->sendRawTx(); break;
+        case 83: _t->syncBlocks(); break;
+        case 84: _t->fetchingHeaders(); break;
+        case 85: _t->headersSynched(); break;
+        case 86: _t->fetchingBlocks(); break;
+        case 87: _t->blocksSynched(); break;
+        case 88: _t->addBestChain((*reinterpret_cast< const chain_header_t(*)>(_a[1]))); break;
+        case 89: _t->removeBestChain((*reinterpret_cast< const chain_header_t(*)>(_a[1]))); break;
+        case 90: _t->newBlock(); break;
+        case 91: _t->startNetworkSync(); break;
+        case 92: _t->stopNetworkSync(); break;
+        case 93: _t->promptSync(); break;
+        case 94: _t->connectionOpen(); break;
+        case 95: _t->connectionClosed(); break;
+        case 96: _t->networkStatus((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 97: _t->networkError((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 98: _t->networkStarted(); break;
+        case 99: _t->networkStopped(); break;
+        case 100: _t->networkTimeout(); break;
+        case 101: _t->networkSettings(); break;
+        case 102: _t->about(); break;
+        case 103: _t->errorStatus((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -692,13 +704,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 102)
+        if (_id < 104)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 102;
+        _id -= 104;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 102)
+        if (_id < 104)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 102;
+        _id -= 104;
     }
     return _id;
 }

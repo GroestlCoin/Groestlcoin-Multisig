@@ -336,6 +336,7 @@
     <ClCompile Include="src\importbip32dialog.cpp" />
     <ClCompile Include="src\importbip39dialog.cpp" />
     <ClCompile Include="src\keychainbackupdialog.cpp" />
+    <ClCompile Include="src\keychainbackupwizard.cpp" />
     <ClCompile Include="src\keychainmodel.cpp" />
     <ClCompile Include="src\keychainview.cpp" />
     <ClCompile Include="src\main.cpp" />
@@ -353,6 +354,7 @@
     <ClCompile Include="src\moc\moc_importbip32dialog.cpp" />
     <ClCompile Include="src\moc\moc_importbip39dialog.cpp" />
     <ClCompile Include="src\moc\moc_keychainbackupdialog.cpp" />
+    <ClCompile Include="src\moc\moc_keychainbackupwizard.cpp" />
     <ClCompile Include="src\moc\moc_keychainmodel.cpp" />
     <ClCompile Include="src\moc\moc_keychainview.cpp" />
     <ClCompile Include="src\moc\moc_mainwindow.cpp" />
@@ -381,6 +383,7 @@
     <ClCompile Include="src\moc\moc_unspenttxoutview.cpp" />
     <ClCompile Include="src\moc\moc_viewbip32dialog.cpp" />
     <ClCompile Include="src\moc\moc_viewbip39dialog.cpp" />
+    <ClCompile Include="src\moc\moc_wordlistvalidator.cpp" />
     <ClCompile Include="src\networkselectiondialog.cpp" />
     <ClCompile Include="src\networksettingsdialog.cpp" />
     <ClCompile Include="src\networksync.cpp">
@@ -417,6 +420,7 @@
     <ClCompile Include="src\versioninfo.cpp" />
     <ClCompile Include="src\viewbip32dialog.cpp" />
     <ClCompile Include="src\viewbip39dialog.cpp" />
+    <ClCompile Include="src\wordlistvalidator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="deps\CoinCore\src\Base58Check.h" />
