@@ -12,41 +12,42 @@
     $ cd odb
 
     Build and install libcutl for linux
-    $ wget http://www.codesynthesis.com/download/libcutl/1.8/libcutl-1.8.0.tar.bz2
-    $ tar -xjvf libcutl-1.8.0.tar.bz2
-    $ cd libcutl-1.8.0
+    $ wget http://www.codesynthesis.com/download/libcutl/1.9/libcutl-1.9.0.tar.bz2
+    $ tar -xjvf libcutl-1.9.0.tar.bz2
+    $ cd libcutl-1.9.0
     $ ./configure
     $ make
     $ sudo make install
     $ sudo ldconfig
     $ cd ..
 
-    Build and install ODB compiler for linux
-    $ sudo apt-get install gcc-4.8-plugin-dev
-    $ wget http://www.codesynthesis.com/download/odb/2.3/odb-2.3.0.tar.bz2
-    $ tar -xjvf odb-2.3.0.tar.bz2
-    $ cd odb-2.3.0
-    $ ./configure
+    Build and install ODB compiler for linux.
+	By some reason ODB is not compatible with latest gcc-4.9-plugin-dev
+    $ sudo apt-get install g++-4.8 gcc-4.8-plugin-dev
+    $ wget http://www.codesynthesis.com/download/odb/2.4/odb-2.4.0.tar.bz2
+    $ tar -xjvf odb-2.4.0.tar.bz2
+    $ cd odb-2.4.0
+    $ CC=gcc-4.8 CXX=g++-4.8 ./configure
     $ make
     $ sudo make install
     $ cd ..
 
 4) Build ODB Common Runtime Library (libodb) for linux 
-    $ wget http://www.codesynthesis.com/download/odb/2.3/libodb-2.3.0.tar.bz2
-    $ tar -xjvf libodb-2.3.0.tar.bz2
+    $ wget http://www.codesynthesis.com/download/odb/2.4/libodb-2.4.0.tar.bz2
+    $ tar -xjvf libodb-2.4.0.tar.bz2
     $ mkdir libodb-linux-build
     $ cd libodb-linux-build 
-    $ ../libodb-2.3.0/configure
+    $ ../libodb-2.4.0/configure
     $ make
     $ sudo make install
     $ cd ..
 
 5) Build ODB Database Runtime Library for sqlite (libodb-sqlite) for linux 
-    $ wget http://www.codesynthesis.com/download/odb/2.3/libodb-sqlite-2.3.0.tar.bz2
-    $ tar -xjvf libodb-sqlite-2.3.0.tar.bz2
+    $ wget http://www.codesynthesis.com/download/odb/2.4/libodb-sqlite-2.4.0.tar.bz2
+    $ tar -xjvf libodb-sqlite-2.4.0.tar.bz2
     $ mkdir libodb-sqlite-linux-build
     $ cd libodb-sqlite-linux-build
-    $ ../libodb-sqlite-2.3.0/configure
+    $ ../libodb-sqlite-2.4.0/configure
     $ make
     $ sudo make install
     $ cd

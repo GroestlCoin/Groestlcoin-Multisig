@@ -153,9 +153,9 @@ cd $CURRENT_DIR
 # For OS X, remove any existing instance of the app bundle
 if [[ "$OS" == "osx" ]]
 then
-    if [[ -e build/$BUILD_TYPE/mSIGNA.app ]]
+    if [[ -e build/$BUILD_TYPE/Groestlcoin-Multisig.app ]]
     then
-        rm -rf build/$BUILD_TYPE/mSIGNA.app
+        rm -rf build/$BUILD_TYPE/Groestlcoin-Multisig.app
     fi
 fi
 
@@ -163,9 +163,9 @@ ${QMAKE_PATH}qmake $SPEC CONFIG+=$BUILD_TYPE && make $OPTIONS
 
 if [[ "$OS" == "osx" ]]
 then
-    if [[ -e build/$BUILD_TYPE/mSIGNA.app/Contents/Resources/qt.conf ]]
+    if [[ -e build/$BUILD_TYPE/Groestlcoin-Multisig.app/Contents/Resources/qt.conf ]]
     then
-        rm build/$BUILD_TYPE/mSIGNA.app/Contents/Resources/qt.conf
+        rm build/$BUILD_TYPE/Groestlcoin-Multisig.app/Contents/Resources/qt.conf
     fi
     ${MACDEPLOYQT_PATH}macdeployqt $(find ./build/$BUILD_TYPE -name *.app)
 fi

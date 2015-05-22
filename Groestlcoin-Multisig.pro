@@ -1,5 +1,5 @@
 #######################################
-# mSIGNA.pro
+# Groestlcoin-Multisig.pro
 #
 # Copyright (c) 2013-2015 Eric Lombrozo
 #
