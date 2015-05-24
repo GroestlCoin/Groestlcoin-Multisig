@@ -23,7 +23,7 @@
 
 const int COMMAND_SERVER_TIMEOUT = 500;
 const QString COMMAND_SERVER_NAME("GroestlCoinVaultCommandServer");
-const QString COMMAND_SERVER_URL_PREFIX("groestl:");
+const QString COMMAND_SERVER_URL_PREFIX("groestlcoin:");
 
 CommandServer::CommandServer(QObject* parent)
     : QObject(parent), server(NULL)
