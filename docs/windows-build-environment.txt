@@ -66,6 +66,10 @@ Requirements:
 			./inc/QtGui -> C:\Qt\qtbase\include\QtGui
 			./inc/QtNetwork -> C:\Qt\qtbase\include\QtNetwork
 			./inc/QtWidgets -> C:\Qt\qtbase\include\QtWidgets
+
+		Create moc_*.cpp files:
+			cd src
+			msbuild moc.proj
 		
 		open Groestlcoin-Multisig.sln
 		Build x86 or x64 configuration
