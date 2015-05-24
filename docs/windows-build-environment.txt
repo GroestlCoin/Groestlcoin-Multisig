@@ -1,0 +1,72 @@
+Requirements:
+	Visual Studio 2015 or 2013
+
+
+1) Download and unpack Boost 1.58 or later
+    http://sourceforge.net/projects/boost/files/boost/1.58.0/boost_1_58_0.7z/download
+
+	Build it for x86 or x64 with static linking:
+		b2 --build-dir=e:/work/bb toolset=msvc --build-type=minimal  link=static runtime-link=static architecture=x86 variant=release
+		b2 --build-dir=e:/work/bb toolset=msvc --build-type=minimal  link=static runtime-link=static architecture=x86 address-model=64  variant=release
+
+	copy following generated .lib files to directories ./x86_libs, ./x64_libs:
+		libboost_filesystem-vc140-mt-s-1_58.lib
+		libboost_regex-vc140-mt-s-1_58.lib
+		libboost_serialization-vc140-mt-s-1_58.lib
+		libboost_system-vc140-mt-s-1_58.lib
+		libboost_thread-vc140-mt-s-1_58.lib
+
+
+2) Download Qt 5.x https://www.qt.io/download-open-source/
+	Unpack it to some directory (in this example C:\Qt)
+
+	Modify file C:\Qt\qtbase\mkspecs\win32-msvc2013\qmake.conf:
+		change -MD options to -MT
+	it is necessary for static linking
+
+	Create and run following .BAT file to build Qt libs:
+		CALL "C:\Program Files\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
+		SET _ROOT=C:\Q
+		SET QT=C:\Qt
+		SET PATH=%_ROOT%\qtbase\bin;%QT%\gnuwin32\bin;c:\p\python;%PATH%
+		SET QMAKESPEC=win32-msvc2013
+		SET _ROOT=
+
+		call %QT%\configure -static -release -no-opengl -no-ltcg -nomake examples -opensource  -platform win32-msvc2013  -confirm-license
+		nmake 
+
+ 	copy following .lib files to the ./x86_libs directory:
+		Qt5Core.lib
+		Qt5Gui.lib
+		Qt5Network.lib
+		Qt5PlatformSupport.lib
+		Qt5Widgets.lib	
+		qtharfbuzzng.lib
+		qtmain.lib
+		qwindows.lib
+
+	Copy moc.exe, rcc.exe to some directory in the %PATH%.
+	
+3) Top build OpenSSL and SQLite libraries:
+		git clone https://github.com/github.com/GroestlCoin/Groestlcoin-WPF  --recursive
+		open GroestlCoin-WPF.sln  select x86 release configuration and build OpenSSL and SQLite projects.
+		copy openssl.lib, sqlite.lib files to the ./x86_libs directory.
+
+4) Build GroestlCoin-multisig:
+		git clone https://github.com/github.com/GroestlCoin/Groestlcoin-Multisig  --recursive
+		mak following directory SymLinks:
+			./inc/boost ->  Directory with Boost
+			./inc/CoinCore -> deps/CoinCore/src
+			./inc/CoinDB -> deps/CoinDB/src
+			./inc/CoinQ -> deps/CoinQ/src
+			./inc/logger -> deps/logger/src
+			./inc/Signals -> deps/Signals/src
+			./inc/stdutils -> deps/stdutils/src
+			./inc/QtCore -> C:\Qt\qtbase\include\QtCore
+			./inc/QtGui -> C:\Qt\qtbase\include\QtGui
+			./inc/QtNetwork -> C:\Qt\qtbase\include\QtNetwork
+			./inc/QtWidgets -> C:\Qt\qtbase\include\QtWidgets
+		
+		open Groestlcoin-Multisig.sln
+		Build x86 or x64 configuration
+		
