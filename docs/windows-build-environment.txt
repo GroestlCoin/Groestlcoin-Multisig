@@ -48,13 +48,13 @@ Requirements:
 	Copy moc.exe, rcc.exe to some directory in the %PATH%.
 	
 3) Top build OpenSSL and SQLite libraries:
-		git clone https://github.com/github.com/GroestlCoin/Groestlcoin-WPF  --recursive
+		git clone https://github.com/GroestlCoin/Groestlcoin-WPF  --recursive
 		open GroestlCoin-WPF.sln  select x86 release configuration and build OpenSSL and SQLite projects.
 		copy openssl.lib, sqlite.lib files to the ./x86_libs directory.
 
 4) Build GroestlCoin-multisig:
-		git clone https://github.com/github.com/GroestlCoin/Groestlcoin-Multisig  --recursive
-		mak following directory SymLinks:
+		git clone https://github.com/GroestlCoin/Groestlcoin-Multisig  --recursive
+		make following directory SymLinks:
 			./inc/boost ->  Directory with Boost
 			./inc/CoinCore -> deps/CoinCore/src
 			./inc/CoinDB -> deps/CoinDB/src
