@@ -53,7 +53,7 @@
     $ cd
 
 6) Clone mSIGNA repository, in case you haven't done so already:
-    $ git clone https://github.com/ciphrex/mSIGNA.git
+    $ git clone https://github.com/GroestlCoin/Groestlcoin-Multisig
 
 7) Build qrencode QR Code C library (libqrencode) for linux
     $ cd mSIGNA/deps/qrencode-3.4.3

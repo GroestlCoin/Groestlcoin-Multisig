@@ -10,7 +10,7 @@ Mac OS 10.8.5 Mountain Lion
 4) Install Xcode command line tools from Apple Developer Support. (command_line_tools_osx_mountain_lion_for_xcode_october_2013.dmg)
 
 5) Install Homebrew:
-    $ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+    $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     $ brew doctor
 
 6) Install packages:
@@ -60,7 +60,7 @@ Boost from homebrew on Mountain Lion is built using libstdc++ rather than libc++
     $ cd ..
 
 9) Clone mSIGNA repository, in case you haven't done so, already:
-    $ git clone https://github.com/ciphrex/mSIGNA.git
+    $ git clone https://github.com/GroestlCoin/Groestlcoin-Multisig
 
 10) Build qrencode QR Code C library (libqrencode) for os x
     $ cd mSIGNA/deps/qrencode-3.4.3
@@ -125,7 +125,7 @@ Mac OS X 10.9.x Mavericks
     $ cd ..
 
 12) Clone mSIGNA repository, in case you haven't done so already:
-    $ git clone https://github.com/ciphrex/mSIGNA.git
+    $ git clone https://github.com/GroestlCoin/Groestlcoin-Multisig
 
 13) Build qrencode QR Code C library (libqrencode) for os x
     $ cd mSIGNA/deps/qrencode-3.4.3
