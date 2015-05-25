@@ -15,7 +15,7 @@ Mac OS 10.8.5 Mountain Lion
 
 6) Install packages:
     $ brew update
-    $ brew install git wget qt5 openssl libpng
+    $ brew install git wget qt5 openssl libpng pkgconfig
     $ brew link qt5 --force
     $ brew link openssl --force
 
