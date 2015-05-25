@@ -168,4 +168,7 @@ then
         rm build/$BUILD_TYPE/Groestlcoin-Multisig.app/Contents/Resources/qt.conf
     fi
     ${MACDEPLOYQT_PATH}macdeployqt $(find ./build/$BUILD_TYPE -name *.app)
+	cd ./build/$BUILD_TYPE
+	rm *.zip
+	zip -r GroestlCoin-Multisig.zip Groestlcoin-Multisig.app
 fi
