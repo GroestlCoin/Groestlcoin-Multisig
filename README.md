@@ -1,15 +1,11 @@
-                                 m S I G N A (TM)
-===============================================================================
 Copyright (c) 2013-2015 Ciphrex Corporation, All Rights Reserved.
+Copyright (c) 2015 Groestlcoin, All Rights Reserved.
 
-
-mSIGNA is an interactive desktop application for transacting on the bitcoin network
+Groestlcoin Multisig is an interactive desktop application for transacting on the Groestlcoin network
 supporting m-of-n signature policies and multiuser/multidevice account management.
-While the current release builds only support bitcoin, it is possible to compile it 
-to support other bitcoin-like blockchain-based cryptocurrencies. 
 
 It is built atop three custom libraries, CoinCore, CoinQ, and CoinDB, which provide
-all core functionality for managing bitcoin data structures, connecting to peers, and
+all core functionality for managing Groestlcoin data structures, connecting to peers, and
 handling persistent storage.
 
     -CoinCore is licensed under the MIT license.
@@ -17,7 +13,7 @@ handling persistent storage.
     -CoinQ and CoinDB are licensed under the AGPLv3 license.
 
 
-In addition, mSIGNA depends on the following:
+In addition, Groestlcoin Multisig depends on the following:
 
     - Qt5 application and UI framework          http://qt-project.org/
         * Qt5Core
@@ -46,7 +42,7 @@ In addition, mSIGNA depends on the following:
     - qrencode QR Code C library                http://fukuchi.org/works/qrencode/
         * qrencode (distribution provided in deps directory)
 
-mSIGNA has been built in Linux using gcc 4.6.3 and greater for both 64-bit Linux
+Groestlcoin Multisig has been built in Linux using gcc 4.6.3 and greater for both 64-bit Linux
 and 64-bit Windows (cross-build, mingw64). It has also been built using
 clang (Xcode 4.1 and greater) in OS X (10.7 and greater).
 
