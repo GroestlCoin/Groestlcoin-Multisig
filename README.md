@@ -1,6 +1,3 @@
-Copyright (c) 2013-2015 Ciphrex Corporation, All Rights Reserved.
-Copyright (c) 2015 Groestlcoin, All Rights Reserved.
-
 Groestlcoin Multisig is an interactive desktop application for transacting on the Groestlcoin network
 supporting m-of-n signature policies and multiuser/multidevice account management.
 
